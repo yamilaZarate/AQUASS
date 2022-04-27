@@ -1,0 +1,450 @@
+    html {
+    height: 100%;
+}
+body {
+    min-height: 100%;
+    background: url("inicio.png")
+    no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Contenedor de fondo */
+.water_calculator {
+    width: 100%;
+    height: 100%;
+    background: url("img/fondo_simulador.png") no-repeat center center fixed; 
+    background-size: cover;
+}
+
+/* Contenedor de contenido */
+.water_calculator .contenedor-contenido {
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100%;
+    max-width: 900px;
+    font-size: 16px; /* Fuente base */
+    font-family: "Roboto", sans-serif;
+}
+
+.water_calculator .navegacion {
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+.water_calculator ul.wcalculator {
+    list-style: none outside none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.water_calculator .content-slider li {
+    /*background-color: #eee;*/
+    text-align: center;
+}
+
+.water_calculator .content-slider .question-header {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    font-weight: 400;
+    color: #00bcb6;
+    border-bottom: 2px solid #00bcb6;
+    font-size: 1.725em;
+    line-height: 30px;
+}
+
+.water_calculator .content-slider .question-header.resultados {
+    font-family: "Pacifico", cursive;
+}
+
+.water_calculator .content-slider .question-header span.icon {
+    height: 40px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    padding-left: 48px;
+    margin: 0 auto;
+    line-height: 40px;
+    text-align: left;
+    color: #063b81;
+}
+
+.water_calculator .content-slider .question-header span.icon.no_icon {
+    padding-left: 0;
+}
+
+.water_calculator .content-slider .question-text {
+    font-family: "Pacifico", cursive;
+    color: #063b81;
+    width: 100%;
+    font-size: 35px;
+    line-height: 1.3625em;
+}
+
+.water_calculator .content-slider .question-text .nota {
+    display: block;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    margin-top: -2px;
+}
+
+.water_calculator .inicio_logo_aquas {
+}
+
+.water_calculator .inicio_titulo {
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    margin-top: 30px;
+    color: #063b81;
+}
+.water_calculator .inicio_titulo h5 {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.1875em;
+}
+.water_calculator .inicio_titulo h4 {
+    color: #ffffff;
+    font-size: 26px;
+    font-weight: 600;
+    margin-top: -4px;
+}
+.water_calculator .inicio_titulo h1 {
+    font-family: "Pacifico", cursive;
+    font-size: 39px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.water_calculator .inicio_nota {
+    font-size: 11px;
+    padding: 5px;
+    max-width: 470px;
+    width: 80%;
+    margin: 0 auto;
+    color: #4a4a4a;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.water_calculator .imagen_ppal {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.water_calculator .imagen_ppal img {
+    width: 280px;
+    height: 233px;
+}
+.water_calculator .imagen_ppal.inicio {
+    margin-top: 10px;
+}
+.water_calculator .imagen_ppal.inicio img {
+    width: 280px;
+    height: 233px;
+}
+
+
+/* Area preguntas - checkbox */
+.water_calculator .preguntas {
+    text-align: left;
+    margin-top: 30px;
+    display: inline-block;
+}
+.water_calculator .preguntas label {
+    font-size: 19px;
+    color: #063b81;
+    font-weight: 600;
+    display: inline-block;
+    margin-right: 10px;
+    font-family: "Roboto Condensed", sans-serif;
+}
+.water_calculator .preguntas label input {
+    margin-right: 3px;
+}
+/* Estilos RADIOS BUTTONS */
+@keyframes click-wave {
+    0% {
+        height: 40px;
+        width: 40px;
+        opacity: 0.35;
+        position: relative;
+    }
+    100% {
+        height: 200px;
+        width: 200px;
+        margin-left: -80px;
+        margin-top: -80px;
+        opacity: 0;
+    }
+}
+
+.water_calculator .option-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    position: relative;
+    top: 13.33333px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 40px;
+    width: 40px;
+    transition: all 0.15s ease-out 0s;
+    background: #efedf2;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 0.5rem;
+    outline: none;
+    position: relative;
+    z-index: 1000;
+}
+.water_calculator .option-input:hover {
+    background: #dfdfdf;
+}
+.water_calculator .option-input:checked {
+    background: #7ebf47;
+}
+.water_calculator .option-input:checked::before {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    content: "✔";
+    display: inline-block;
+    font-size: 26.66667px;
+    text-align: center;
+    line-height: 40px;
+}
+.water_calculator .option-input:checked::after {
+    -webkit-animation: click-wave 0.65s;
+    -moz-animation: click-wave 0.65s;
+    animation: click-wave 0.65s;
+    background: #40e0d0;
+    content: "";
+    display: block;
+    position: relative;
+    z-index: 100;
+}
+.water_calculator .option-input.radio {
+    border-radius: 50%;
+}
+.water_calculator .option-input.radio::after {
+    border-radius: 50%;
+}
+.water_calculator .option-input.radio:focus {
+    outline: none;
+}
+/* ESTILOS RANGE SLIDER */
+.water_calculator .value {
+    border-bottom: 4px dashed #00b9f1;
+    text-align: center;
+    font-weight: bold;
+    font-size: 5em;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    letter-spacing: -0.07em;
+    text-shadow: white 2px 2px 2px;
+    color: #063b81;
+}
+.water_calculator input[type="range"] {
+    display: block;
+    -webkit-appearance: none;
+    background-color: #063b81;
+    width: 300px;
+    height: 5px;
+    border-radius: 5px;
+    margin: 0 auto;
+    outline: 0;
+}
+.water_calculator input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: #00b9f1;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #063b81;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.water_calculator ​ input[type="range"]::-webkit-slider-thumb:hover {
+    background-color: white;
+    border: 2px solid #00b9f1;
+}
+.water_calculator input[type="range"]::-webkit-slider-thumb:active {
+    transform: scale(1.6);
+}
+
+
+/* Estilos botones de navecacion */
+
+.water_calculator button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: "Noto Serif", serif;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+.water_calculator button.btn-nav-estilo {
+    /* font-weight: 600; */
+    color: #fff;
+    /* text-transform: uppercase; */
+    /* padding: 1.25em 2em; */
+    padding: 0.7em 1.2em;
+    background: #00b9f1;
+    /* border: 2px solid #b18597; */
+    border: 2px solid #0072bc;
+    border-radius: 0.75em;
+    transform-style: preserve-3d;
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1),
+    background 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+.water_calculator button.btn-nav-estilo::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #1188d6;
+    border-radius: inherit;
+    /* box-shadow: 0 0 0 2px #0072bc, 0 0.625em 0 0 #b7d4db; */
+    transform: translate3d(0, 0.75em, -1em);
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1),
+    box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+.water_calculator button.btn-nav-estilo:hover {
+    background: #00b9f1;
+    transform: translate(0, 0.25em);
+}
+.water_calculator button.btn-nav-estilo:hover::before {
+    /* box-shadow: 0 0 0 2px #0072bc, 0 0.5em 0 0 #b7d4db; */
+    transform: translate3d(0, 0.5em, -1em);
+}
+.water_calculator button.btn-nav-estilo:active {
+    background: #00b9f1;
+    transform: translate(0em, 0.75em);
+}
+.water_calculator button.btn-nav-estilo:active::before {
+    box-shadow: 0 0 0 2px #0072bc, 0 0 #b7d4db;
+    transform: translate3d(0, 0, -1em);
+}
+
+.water_calculator .resultados {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.water_calculator .resultados h1 {
+    font-weight: 600;
+    color: #063b81;
+    font-size: 1.625em;
+    line-height: 32px;
+}
+.water_calculator .resultados h1, {
+    margin: 0;
+}
+.water_calculator .resultados h1 span {
+
+    color: black;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.water_calculator .resultados h1 {
+    font-weight: 600;
+    color: #0e4873;
+    font-size: 21px;
+    line-height: 26px;
+    margin-top: 20px !important;
+}
+.water_calculator .resultados h1 {
+    font-weight: 600;
+    color: #0e4873;
+    font-size: 21px;
+    line-height: 26px;
+}
+
+/* ############## MEDIA 480*/
+@media screen and (max-width: 480px) {
+    .water_calculator .contenedor-contenido {
+        width: 100%;
+        padding-top: 10px;
+    }
+
+    .water_calculator .content-slider .question-header {
+        font-size: 20px;
+    }
+
+    .water_calculator button {
+        font-size: 17px;
+    }
+
+    .water_calculator .inicio_nota {
+        font-size: 11px;
+    }
+    .water_calculator .inicio_texo {
+        font-size: 15px;
+    }
+    .water_calculator .inicio_titulo h1 {
+        font-size: 33px;
+    }
+
+    .water_calculator .content-slider .question-text {
+        font-size: 33px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .water_calculator .content-slider .question-text .nota {
+        font-size: 16px;
+        margin-top: 7px;
+        line-height: 22px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .water_calculator .imagen_ppal {
+        margin-top: 30px;
+    }
+
+    .water_calculator .imagen_ppal img {
+        width: 250px;
+        height: 208px;
+    }
+    .water_calculator .imagen_ppal.inicio {
+        margin-top: 30px;
+    }
+    .water_calculator .imagen_ppal.inicio img {
+        width: 250px;
+        height: 208px;
+    }
+
+    .water_calculator .content-slider .question-header {
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+    }
+
+    /* Format resultados finales */
+    .water_calculator .resultados h1 {
+        font-weight: 600;
+        color: #0e4873;
+        font-size: 21px;
+        line-height: 26px;
+        margin-top: 20px !important;
+    }
+    .water_calculator .resaltado {
+        font-size: 27px;
+    }

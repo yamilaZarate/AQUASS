@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Aquas -Simulador de Consumo</title>
+    <meta name= "author" content= "Zarate Yamila">
+    <meta name= "description" content= "Simulador">
+    <link rel="stylesheet" type="text/css" href="/programacion3/gestion_user/modulos/simulador/estilos.css">
+    <link rel="shortcut icon" href="logo2.jpg">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+	<script>
+		$(function(){
+			$("input[type=radio]").click(function(){
+				calcular();
+			})
+		});
+		function calcular(){
+			$radios = $("input[type=radio]:checked");
+			var consumo_total = 0;
+			$radios.each(function(){
+				consumo_total = consumo_total + parseInt ($(this). val());
+				$(".resultado").html(consumo_total)  
+			})
+		}
+	</script>
+    <script>
+        /* boton volver al inicio*/
+        function volverInicio(){
+            var paso11= document.getElementById("paso11");
+            var paso1= document.getElementById("paso1");
+
+            paso11.style.display = "none";
+            paso1.style.display = "block";
+        }
+        /*FIN de estilo boton volver*/
+
+        /* Botones paso anterior */
+        function volverPaso2(){
+            var paso2= document.getElementById("paso2");
+            var paso1= document.getElementById("paso1");
+
+            paso2.style.display = "none";
+            paso1.style.display = "block";
+        }
+        function volverPaso3(){
+            var paso3= document.getElementById("paso3");
+            var paso2= document.getElementById("paso2");
+
+            paso3.style.display = "none";
+            paso2.style.display = "block";
+        }
+        function volverPaso4(){
+            var paso4= document.getElementById("paso4");
+            var paso3= document.getElementById("paso3");
+
+            paso4.style.display = "none";
+            paso3.style.display = "block";
+        }
+        function volverPaso5(){
+            var paso5= document.getElementById("paso5");
+            var paso4= document.getElementById("paso4");
+
+            paso5.style.display = "none";
+            paso4.style.display = "block";
+        }
+        function volverPaso6(){
+            var paso6= document.getElementById("paso6");
+            var paso5= document.getElementById("paso5");
+
+            paso6.style.display = "none";
+            paso5.style.display = "block";
+        }
+        function volverPaso7(){
+            var paso7= document.getElementById("paso7");
+            var paso6= document.getElementById("paso6");
+
+            paso7.style.display = "none";
+            paso6.style.display = "block";
+        }
+        function volverPaso8(){
+            var paso8= document.getElementById("paso8");
+            var paso7= document.getElementById("paso7");
+
+            paso8.style.display = "none";
+            paso7.style.display = "block";
+        }
+        function volverPaso9(){
+            var paso9= document.getElementById("paso9");
+            var paso8= document.getElementById("paso8");
+
+            paso9.style.display = "none";
+            paso8.style.display = "block";
+        }
+        function volverPaso10(){
+            var paso10= document.getElementById("paso10");
+            var paso9= document.getElementById("paso9");
+
+            paso10.style.display = "none";
+            paso9.style.display = "block";
+        }
+        /*FIN DE BOTONES ANTERIORES*/
+
+        /* inicio de botones siguiente */
+
+        function MostrarPaso2(){
+            var paso1= document.getElementById("paso1");
+            var paso2= document.getElementById("paso2");
+
+            paso1.style.display = "none";
+            paso2.style.display = "block";
+        }
+
+        function MostrarPaso3(){
+            var paso2= document.getElementById("paso2");
+            var paso3= document.getElementById("paso3");
+
+            paso2.style.display = "none";
+            paso3.style.display = "block";
+        }
+        function MostrarPaso4(){
+            var paso3= document.getElementById("paso3");
+            var paso4= document.getElementById("paso4");
+
+            paso3.style.display = "none";
+            paso4.style.display = "block";
+        }
+
+        function MostrarPaso5(){
+            var paso4= document.getElementById("paso4");
+            var paso5= document.getElementById("paso5");
+
+            paso4.style.display = "none";
+            paso5.style.display = "block";
+        }  
+        function MostrarPaso6(){
+            var paso5= document.getElementById("paso5");
+            var paso6= document.getElementById("paso6");
+
+            paso5.style.display = "none";
+            paso6.style.display = "block";
+        } 
+        function MostrarPaso7(){
+            var paso6= document.getElementById("paso6");
+            var paso7= document.getElementById("paso7");
+
+            paso6.style.display = "none";
+            paso7.style.display = "block";
+        }    
+        function MostrarPaso8(){
+            var paso7= document.getElementById("paso7");
+            var paso8= document.getElementById("paso8");
+
+            paso7.style.display = "none";
+            paso8.style.display = "block";
+        }
+        function MostrarPaso9(){
+            var paso8= document.getElementById("paso8");
+            var paso9= document.getElementById("paso9");
+
+            paso8.style.display = "none";
+            paso9.style.display = "block";
+        }
+        function MostrarPaso10(){
+            var paso9= document.getElementById("paso9");
+            var paso10= document.getElementById("paso10");
+
+            paso9.style.display = "none";
+            paso10.style.display = "block";
+        }
+        function MostrarPaso11(){
+            var paso10= document.getElementById("paso10");
+            var paso11= document.getElementById("paso11");
+
+            paso10.style.display = "none";
+            paso11.style.display = "block";
+        }
+
+    </script>
+
+</head>
+<body>
+    <!-- WATER CALCULATOR -->
+    <div id="paso1" style="display: block;">
+        <div class="water_calculator">     
+            <div class="contenedor-contenido">
+                <ul id="content-slider" class="content-slider wcalculator">
+
+                    <!-- SLIDE -->
+                    <li>
+                        <div class="inicio_logo_aquas">
+                            <img src="logo2.jpg" width="90px" height="90px" alt="Aquas-valoremos lo esencial"> 
+                        </div>
+
+                        <div class="inicio_titulo">
+
+                            <h1>"Simulador de consumo de agua"</h1>
+                        </div>
+
+                        <!-- Imagen-->
+                        <div class="imagen_ppal inicio">
+                            <img src="calculadora.jpg">
+                        </div>
+                        
+                        <div class="inicio_texo">
+                            <cite>El agua limpia es un bien precioso pero escaso. No debemos derrocharla ni tampoco ensuciarla. Otros tambien la necesitan!</cite> 
+                        </div>
+
+                        <br><br>
+
+                        <div class="inicio_boton">
+                            <button type="button" class="btn-nav-estilo next-btn inicio" onclick="MostrarPaso2();">¡Descubrí cuánta agua consumís!</button>
+                        </div>
+                        <br><br>
+
+                        <div class="inicio_nota">                                    
+                            Los datos de la simulación de consumo son aproximados.                                    
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="paso2" style="display: none;">
+        <div class="water_calculator">     
+            <div class="contenedor-contenido">
+                <ul id="content-slider" class="content-slider wcalculator">
+
+                    <li>
+                        <div class="question-header">
+                            <span class="icon ic_ducha">Hogar</span>                              
+                        </div>
+                        <div class="question-text">¿Cuántas Personas viven en tu casa?</div>
+
+                        <!-- Imagen-->
+                        <div class="imagen_ppal">
+                            <img src="casa.png" width="80px" height="80px">
+                        </div>
+
+                        <!-- preguntas -->
+                        <div class="preguntas">
+                            <label>
+                                <input type="radio" class="option-input radio radio-personas" name="persona" value="300" />
+                                1 persona
+                            </label>
+
+                            <label>
+                                <input type="radio" class="option-input radio radio-personas" name="persona" value="600" />
+                                Mas de 3 personas
+                            </label>
+
+                            <label>
+                                <input type="radio" class="option-input radio radio-personas" name="persona" value="1000" />
+                                Mas de 5 personas
+                            </label>
+                        </div>
+
+                        <div class="navegacion">
+                            <button type="button" class="btn-nav-estilo prev-btn" id="prev_btn_xx" onclick="volverPaso2();"><i class="bi bi-arrow-left"></i> Anterior</button>
+                            <button type="button" class="btn-nav-estilo next-btn btn-navigation"  id="next_btn_cant_personas" onclick="MostrarPaso3();">Pr&oacute;ximo <i class="bi bi-arrow-right"></i></button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="paso3" style="display: none;">
+        <div class="water_calculator">     
+            <div class="contenedor-contenido">
+                <ul id="content-slider" class="content-slider wcalculator">
+                    <li>
+                        <div class="question-header">
+                            <span class="icon ic_ducha">Ducha</span>                              
+                        </div>
+                        <div class="question-text">¿Cuánto tiempo tardan en bañarse en tu casa?</div>
+
+                        <!-- Imagen-->
+                        <div class="imagen_ppal">
+                          <img src="ducha.png" width="80px" height="80px">
+                        </div>
+
+                      <!-- preguntas -->
+                        <div class="preguntas">
+                            <label>
+                                <input type="radio" class="option-input radio radio-ducha" name="ducha" value="2859" />
+                                5 minutos
+                            </label>
+
+                            <label>
+                                <input type="radio" class="option-input radio radio-ducha" name="ducha" value="5000" />
+                                10 minutos
+                            </label>
+
+                            <label>
+                                <input type="radio" class="option-input radio radio-ducha" name="ducha" value="10000" />
+                                15 minutos
+                            </label>
+                        </div>
+
+                        <div class="navegacion">
+                            <button type="button" class="btn-nav-estilo prev-btn btn-navigation" id="prev_btn_xx" onclick="volverPaso3();"><i class="bi bi-arrow-left"></i> Anterior</button>
+                            <button type="button" class="btn-nav-estilo next-btn btn-navigation" id="next_btn_ducha" onclick="MostrarPaso4();">Pr&oacute;ximo <i class="bi bi-arrow-right"></i></button>
+                        </div>    
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="paso4" style="display: none;">
+        <div class="water_calculator">     
+            <div class="contenedor-contenido">
+                <ul id="content-slider" class="content-slider wcalculator">
+                    <!-- SLIDE -->
+                    <li>
+                        <div class="question-header">
+                            <span class="icon ic_inodoro">Inodoro</span>                              
+                        </div>
+
+                        <div class="question-text" style="margin-bottom: -10px;margin-top: 20px;">
+                            ¿Cuántas veces se descarga el inodoro en tu casa?
+                        </div>
+
+                        <!-- Imagen-->
+                        <div class="imagen_ppal">
+                          <img src="inodoro.png" width="80px" height="80px">
+                      </div>
+
+                      <!-- preguntas -->
+                        <div class="preguntas">
+                            <label>
+                                <input type="radio" class="option-input radio radio-inodoro" name="inodoro" value="240" />
+                                2 veces por día 
+                            </label>
+
+                            <label>
+                                <input type="radio" class="option-input radio radio-inodoro" name="inodoro" value="480"/>
+                                4 veces por día 
+                            </label>
+
+                            <label>
+                                <input type="radio" class="option-input radio radio-inodoro" name="inodoro" value="960" />
+                                8 veces por día 
+                            </label>
+                        </div>
+
+                        <div class="navegacion">
+                            <button type="button" class="btn-nav-estilo prev-btn btn-navigation" id="prev_btn_xx" onclick="volverPaso4();"><i class="bi bi-arrow-left"></i> Anterior</button>
+                            <button type="button" class="btn-nav-estilo next-btn btn-navigation" id="next_btn_inodoro" onclick="MostrarPaso5();">Pr&oacute;ximo <i class="bi bi-arrow-right"></i></button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="paso5" style="display: none;">
+        <div class="water_calculator">     
+            <div class="contenedor-contenido">
+                <ul id="content-slider" class="content-slider wcalculator">
+                    <!-- SLIDE -->
+                    <li>
+                        <div class="question-header">
+                            <span class="icon ic_manos">Lavado de manos</span>                              
+                        </div>
+                        <div class="question-text">
+                            ¿Cuánto tiempo dejás abierta la canilla por día?
+                            <span class="nota">
+                                (para lavarte las manos, la cara, cepillarte los dientes o afeitarte)
+                            </span>
+                        </div>
+
+                        <!-- Imagen-->
+                        <div class="imagen_ppal">
+                          <img src="manos.png" width="80px" height="80px">
+                        </div>
+
+                      <!-- preguntas -->
+                        <div class="preguntas">
+                            <label>
+                                <input type="radio" class="option-input radio radio-manos" name="manos" value="360" />
+                                3 minutos por día 
+                            </label>
+                            <label>
+                                <input type="radio" class="option-input radio radio-manos" name="manos" value="600"/>
+                                5 minutos por día 
+                            </label>
+                            <label>
+                                <input type="radio" class="option-input radio radio-manos" name="manos" value="1200" />
+                                15 minutos por día 
+                            </label>
+                        </div>
+
+                        <div class="navegacion">
+                            <button type="button" class="btn-nav-estilo prev-btn btn-navigation" id="prev_btn_xx" onclick="volverPaso5();"><i class="bi bi-arrow-left"></i> Anterior</button>
+                            <button type="button" class="btn-nav-estilo next-btn btn-navigation" id="next_btn_manos" onclick="MostrarPaso6();">Pr&oacute;ximo <i class="bi bi-arrow-right"></i></button>
+                        </div>
+                    </li>  
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="paso6" style="display: none;">
+        <div class="water_calculator">     
+            <div class="contenedor-contenido">
+                <ul id="content-slider" class="content-slider wcalculator">
+                    <!-- SLIDE -->
+                    <li>
+                        <div class="question-header">
+                            <span class="icon ic_platos_mano">Lavado de platos a mano</span>                              
+                        </div>
+                        <div class="question-text">¿Cuántas veces lavás los platos a mano?</div>
+
+                        <!-- Imagen-->
+                        <div class="imagen_ppal">
+                          <img src="lavado.png" width="80px" height="80px">
+
+                         </div>
+
+                      <!-- preguntas -->
+                        <div class="preguntas">
+                            <label>
+                                <input type="radio" class="option-input radio radio-platos" name="platos" value="600"/>
+                                1 vez por día 
+                            </label>
+                            <label>
+                                <input type="radio" class="option-input radio radio-platos" name="platos" value="1200" />
+                                2 veces por día 
+                            </label>
+                            <label>
+                                <input type="radio" class="option-input radio radio-platos" name="platos" value="1800"/>
+                                3 veces por día 
+                            </label>
+                            <label>
+                                <input type="radio" class="option-input radio radio-platos" name="platos" value="0"/>
+                                Uso lavavajilla
+                            </label>
+                        </div>
+                        <div class="navegacion">
+                            <button type="button" class="btn-nav-estilo prev-btn btn-navigation radio-platos" id="prev_btn_xx" onclick="volverPaso6();"><i class="bi bi-arrow-left"></i> Anterior</button>
+                            <button type="button" class="btn-nav-estilo next-btn btn-navigation radio-platos" id="next_btn_platos" onclick="MostrarPaso7();">Pr&oacute;ximo <i class="bi bi-arrow-right"></i></button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="paso7" style="display: none;">
+        <div class="water_calculator">     
+            <div class="contenedor-contenido">
+                <ul id="content-slider" class="content-slider wcalculator">
+                    <!-- SLIDE -->
+                    <li>
+                        <div class="question-header">
+                            <span class="icon ic_platos_lavavajillas">Lavado de platos con lavavajilla</span>                              
+                        </div>
+                        <div class="question-text">¿Cuántas veces lavás los platos con lavavajilla?</div>
+                        <!-- Imagen-->
+                        <div class="imagen_ppal">
+                            <img src="lavavajilla.png" width="80px" height="80px">
+                        </div>
+                        <!-- preguntas -->
+                        <div class="preguntas">
+                            <label>
+                                <input type="radio" class="option-input radio radio-lavavajillas" name="lavavajillas" value="150"/>
+                                1 carga por día 
+                            </label>
+                            <label>
+                                <input type="radio" class="option-input radio radio-lavavajillas" name="lavavajillas" value="300" />
+                                2 cargas por día 
+                            </label>
+                            <label>
+                                <input type="radio" class="option-input radio radio-lavavajillas" name="lavavajillas" value="450"/>
+                                3 cargas por día 
+                            </label>
+                            <label>
+                                <input type="radio" class="option-input radio radio-lavavajillas" name="lavavajillas" value="0"/>
+                                Los lavo a mano 
+                            </label>
+                        </div>
+
+                        <div class="navegacion">
+                            <button type="button" class="btn-nav-estilo prev-btn btn-navigation radio-platos" id="prev_btn_xx" onclick="volverPaso7();"><i class="bi bi-arrow-left"></i> Anterior</button>
+                            <button type="button" class="btn-nav-estilo next-btn btn-navigation radio-platos" id="next_btn_lavavajillas" onclick="MostrarPaso8();">Pr&oacute;ximo <i class="bi bi-arrow-right"></i></button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="paso8" style="display: none;">
+        <div class="water_calculator">     
+            <div class="contenedor-contenido">
+                <ul id="content-slider" class="content-slider wcalculator">
+                    <!-- SLIDE -->
+                    <li>
+                        <div class="question-header">
+                            <span class="icon ic_lavarropas">Lavado de la ropa </span>                              
+                        </div>
+                        <div class="question-text">¿Cuántas veces lavás la ropa?</div>
+
+                        <!-- Imagen-->
+                        <div class="imagen_ppal">
+                            <img src="lavarropa.png" width="80px" height="80px">
+                        </div>
+
+                        <!-- preguntas -->
+                        <div class="preguntas">
+                            <label>
+                                <input type="radio" class="option-input radio radio-ropa" name="ropa" value="280"/>
+                                2 veces por semana 
+                            </label>
+                            <label>
+                                <input type="radio" class="option-input radio radio-ropa" name="ropa" value="1000" />
+                                1 vez por día 
+                            </label>
+                            <label>
+                                <input type="radio" class="option-input radio radio-ropa" name="ropa" value="3000"/>
+                                3 veces por día 
+                            </label>
+                        </div>
+
+                        <div class="navegacion">
+                            <button type="button" class="btn-nav-estilo prev-btn btn-navigation" id="prev_btn_05" onclick="volverPaso8();"><i class="bi bi-arrow-left"></i> Anterior</button>
+                            <button type="button" class="btn-nav-estilo next-btn btn-navigation" id="next_btn_ropa" onclick="MostrarPaso9();">Pr&oacute;ximo <i class="bi bi-arrow-right"></i></button>
+                        </div>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="paso9" style="display: none;">
+        <div class="water_calculator">     
+            <div class="contenedor-contenido">
+                <ul id="content-slider" class="content-slider wcalculator">
+                    <!-- SLIDE -->
+                    <li>
+                        <div class="question-header">
+                            <span class="icon ic_manguera">Lavado del auto </span>                              
+                        </div>
+                        <div class="question-text">¿Cuán seguido lavás el auto?</div>
+
+                        <!-- Imagen-->
+                        <div class="imagen_ppal">
+                            <img src="auto.png" width="80px" height="80px">
+                        </div>
+
+                        <!-- preguntas -->
+                        <div class="preguntas">
+                            <label>
+                                <input type="radio" class="option-input radio radio-auto" name="auto"  value="0" />
+                                No tengo auto 
+                            </label>
+                            <label>
+                                <input type="radio" class="option-input radio radio-auto" name="auto" value="1200" />
+                                1 vez por mes 
+                            </label>
+                            <label>
+                                <input type="radio" class="option-input radio radio-auto" name="auto" value="2400" />
+                                2 veces por mes 
+                            </label>
+                            <label>
+                                <input type="radio" class="option-input radio radio-auto" name="auto" value="4800" />
+                                4 veces por mes 
+                            </label>
+                        </div>
+
+                        <div class="navegacion">
+                            <button type="button" class="btn-nav-estilo prev-btn btn-navigation" id="prev_btn_xx" onclick="volverPaso9();"><i class="bi bi-arrow-left"></i> Anterior</button>
+                            <button type="button" class="btn-nav-estilo next-btn btn-navigation" id="next_btn_auto" onclick="MostrarPaso10();">Pr&oacute;ximo <i class="bi bi-arrow-right"></i></button>
+                        </div>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="paso10" style="display: none;">
+        <div class="water_calculator">     
+            <div class="contenedor-contenido">
+                <ul id="content-slider" class="content-slider wcalculator">
+                    <!-- SLIDE -->
+                    <li>
+                        <div class="question-header">
+                            <span class="icon ic_mascota">Aseo de Mascotas</span>                              
+                        </div>
+                        <div class="question-text">¿Cuántas veces aseas a tu mascota?</div>
+                        <!-- Imagen-->
+                        <div class="imagen_ppal">
+                            <img src="mascotas.png" width="80px" height="80px">
+                        </div>
+                        <!-- preguntas -->
+                        <div class="preguntas">
+                            <label>
+                                <input type="radio" class="option-input radio radio-mascota" name="mascota" value="0" />
+                                No tengo mascota
+                            </label>
+                            <label>
+                                <input type="radio" class="option-input radio radio-mascota" name="mascota" value="90" />
+                                2 veces al mes 
+                            </label>
+                            <label>
+                                <input type="radio" class="option-input radio radio-mascota" name="mascota" value="180" />
+                                3 veces al mes
+                            </label>
+
+                        </div>
+
+                        <div class="navegacion">
+                            <button type="button" class="btn-nav-estilo prev-btn btn-navigation" id="prev_btn_xx" onclick="volverPaso10();"><i class="bi bi-arrow-left"></i> Anterior</button>
+                            <button type="button" class="btn-nav-estilo next-btn btn-navigation" id="next_btn_pileta_lona" onclick="MostrarPaso11();">Pr&oacute;ximo <i class="bi bi-arrow-right"></i></button>
+                        </div>
+                    </li>  
+                </ul>
+            </div>    
+        </div>
+    </div>
+
+    <div id="paso11" style="display: none;">
+        <div class="water_calculator">     
+            <div class="contenedor-contenido">
+                <ul id="content-slider" class="content-slider wcalculator">
+                    <!-- SLIDE -->
+                    <li>
+                        <div class="question-header resultados">
+                            <span class="icon ic_hogar">Tu consumo de agua</span>
+                        </div>
+
+                      
+                        <div class="resultados">
+
+                            <h1 id="consumo_hogar" style="margin-top: 50px;">                                    
+                                En tu casa se consumen <span class="resultado">Debes elegir al menos una opcion para ver tu consumo</span> litros de agua potable por mes
+                            </h1>
+                        </div>
+
+                        <div class="" style="padding-bottom: 20px;">
+                            <button type="button" class="btn-nav-estilo" id="btn-volver-inicio" onclick="volverInicio();"><i class="bi bi-arrow-left"></i> Volver al inicio</button> 
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

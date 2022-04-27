@@ -1,0 +1,14 @@
+.alertaEliminar{
+	border: 1px solid green;
+	border-radius: 4px;
+	color: white;
+	padding: 15px;
+	background-color: green;
+}
+
+#mostrar{
+	padding: 5px;
+	color: white;
+	border-radius: 4px;
+	background-color: teal;
+}

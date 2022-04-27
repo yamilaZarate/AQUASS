@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+<head>
+    
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Simulador de consumo de agua">
+        <meta name="author" content="">
+        <link rel="icon" href="/media-library/imagenes_inicio/favicon.ico">
+
+        <title> Simulador de consumo de agua</title>
+<style>
+
+.water_calculator .inicio_titulo {
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    margin-top: 30px;
+    color: #063b81;
+}
+.water_calculator .inicio_titulo h1 {
+    font-family: "Pacifico", cursive;
+    font-size: 39px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.water_calculator .inicio_texo {
+    font-family: "Noto Serif", serif;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
+    line-height: 1.625em;
+    font-size: 1.0625em;
+}
+.water_calculator .inicio_boton {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.water_calculator .inicio_nota {
+    font-size: 11px;
+    padding: 5px;
+    max-width: 470px;
+    width: 80%;
+    margin: 0 auto;
+    color: #4a4a4a;
+    background-color: rgba(255, 255, 255, 0.2);
+}   
+</style>
+
+
+
+                    <div class="inicio_titulo">
+                        
+                        <h1>"Simulador de consumo de agua"</h1>
+                    </div>
+
+                    <!-- Imagen-->
+                    <div class="imagen_ppal inicio">
+                        <img src="/media-library/lo_bueno_del_agua/simulador/Inicio.png">
+                    </div>
+                    
+                        <div class="inicio_texo">
+                        El agua es un bien ambiental, social y cultural, fundamental.<br>
+                        Está presente en forma permanente en nuestras vidas.<br>
+                        Te invitamos a descubrir cuánta agua consumís por día y reflexionar sobre el valor que le damos a este recurso vital. 
+                        </div>
+
+                        <div class="inicio_boton">
+                        <button class="btn-nav-estilo next-btn inicio" id="">¡Descubrí cuánta agua consumís!</button>
+                        </div>
+
+
+                        <div class="inicio_nota">                                    
+                        Los datos de la simulación de consumo son aproximados y pueden variar según la zona, la construcción, la presión y las instalaciones internas.                                    
+                        </div>
+                    </li>
+
+                <!-- SLIDE -->
+                <li>
+                    <div class="question-header">
+                            <span class="icon ic_hogar">Hogar</span>                              
+                    </div>
+                    <div class="question-text">¿Cuántas personas viven en tu casa?</div>
+
+                    <!-- Imagen-->
+                    <div class="imagen_ppal">
+                        <img src="/media-library/lo_bueno_del_agua/simulador/hogar.png">                        
+                    </div>
+
+                    <!-- Range slider -->
+                    <div class="value">0</div>
+                    <input type="range" min="0" max="20" step="1" value="0" class="range_cant_personas">
+                                
+                    
+                    <div class="navegacion">
+                    <button class="btn-nav-estilo prev-btn" id="prev_btn_xx"><i class="bi bi-arrow-left"></i> Anterior</button>
+                    <button class="btn-nav-estilo next-btn btn-navigation" id="next_btn_cant_personas">Pr&oacute;ximo <i class="bi bi-arrow-right"></i></button>
+                    </div>                   
+
+                    </li>
+                
+
+                <!-- SLIDE -->
+                <li>
+                    <div class="question-header">
+                        <span class="icon ic_ducha">Ducha</span>                              
+                    </div>
+                    <div class="question-text">¿Cuánto tiempo tardan en bañarse en tu casa?</div>
+
+                    <!-- Imagen-->
+                    <div class="imagen_ppal">
+                        <img src="/media-library/lo_bueno_del_agua/simulador/ducha.png">
+                    </div>
+
+                    <!-- preguntas -->
+                    <div class="preguntas">
+                        <label>
+                        <input type="radio" class="option-input radio radio-ducha" name="ducha" value="50" />
+                        5 minutos
+                        </label>
+                       
+                        <label>
+                        <input type="radio" class="option-input radio radio-ducha" name="ducha" value="100" />
+                        10 minutos
+                        </label>
+                       
+                        <label>
+                        <input type="radio" class="option-input radio radio-ducha" name="ducha" value="150" />
+                        15 minutos
+                        </label>
+                    </div>
+                                
+                    <div class="navegacion">
+                    <button class="btn-nav-estilo prev-btn btn-navigation" id="prev_btn_xx"><i class="bi bi-arrow-left"></i> Anterior</button>
+                    <button class="btn-nav-estilo next-btn btn-navigation" id="next_btn_ducha">Pr&oacute;ximo <i class="bi bi-arrow-right"></i></button>
+                    </div>
+
+                    
+
+                </li>
+
+                <!-- SLIDE -->
+                <li>
+                    <div class="question-header">
+                        <span class="icon ic_inmersion">Baño de inmersión</span>                              
+                    </div>
+                    <div class="question-text">¿Te das baños de inmersión? <br> ¿Con qué frecuencia?</div>
+
+                    <div class="imagen_ppal">
+                    <img src="/media-library/lo_bueno_del_agua/simulador/inmersion.png">
+                    </div>
+
+                    <!-- preguntas -->
+                    <div class="preguntas">
+                        <label>
+                        <input type="radio" class="option-input radio radio-inmersion" name="inmersion" value="0" />
+                        Nunca
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-inmersion" name="inmersion" value="35"/>
+                        1 vez por semana
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-inmersion" name="inmersion" value="70" />
+                        2 veces por semana
+                        </label>
+                    </div>
+                                
+                    <div class="navegacion">
+                    <button class="btn-nav-estilo prev-btn btn-navigation" id="prev_btn_xx"><i class="bi bi-arrow-left"></i> Anterior</button>
+                    <button class="btn-nav-estilo next-btn btn-navigation" id="next_btn_inmersion">Pr&oacute;ximo <i class="bi bi-arrow-right"></i></button>
+                    </div>
+
+                </li>                           
+                
+                
+                <!-- SLIDE -->
+                <li>
+                    <div class="question-header">
+                        <span class="icon ic_inodoro">Inodoro</span>                              
+                    </div>
+
+                    <div class="question-text" style="margin-bottom: -10px;
+                    margin-top: 20px;">¿Cuántas veces se descarga el inodoro en tu casa?</div>
+
+                    <!-- Imagen-->
+                    <div class="imagen_ppal">
+                        <img src="/media-library/lo_bueno_del_agua/simulador/inodoro.png">
+                    </div>
+
+                    <!-- preguntas -->
+                    <div class="preguntas">
+                        <label>
+                        <input type="radio" class="option-input radio radio-inodoro" name="inodoro" value="24" />
+                        2 veces por día 
+                        </label>
+                        
+                        <label>
+                        <input type="radio" class="option-input radio radio-inodoro" name="inodoro" value="48"/>
+                        4 veces por día 
+                        </label>
+                        
+                        <label>
+                        <input type="radio" class="option-input radio radio-inodoro" name="inodoro" value="96" />
+                        8 veces por día 
+                        </label>
+                    </div>
+
+                    <div class="navegacion">
+                    <button class="btn-nav-estilo prev-btn btn-navigation" id="prev_btn_xx"><i class="bi bi-arrow-left"></i> Anterior</button>
+                    <button class="btn-nav-estilo next-btn btn-navigation" id="next_btn_inodoro">Pr&oacute;ximo <i class="bi bi-arrow-right"></i></button>
+                    </div>
+                </li>  
+
+
+                <!-- SLIDE -->
+                <li>
+                    <div class="question-header">
+                        <span class="icon ic_manos">Lavado de manos</span>                              
+                    </div>
+                    <div class="question-text">
+                        ¿Cuánto tiempo dejás abierta la canilla por día?
+                        <span class="nota">
+                        (para lavarte las manos, la cara, cepillarte los dientes o afeitarte)
+                        </span>
+                    </div>
+
+                    <!-- Imagen-->
+                    <div class="imagen_ppal">
+                        <img src="/media-library/lo_bueno_del_agua/simulador/lavar-manos.png">
+                    </div>
+
+                    <!-- preguntas -->
+                    <div class="preguntas">
+                        <label>
+                        <input type="radio" class="option-input radio radio-manos" name="manos" value="36" />
+                        3 minutos por día 
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-manos" name="manos" value="60"/>
+                        5 minutos por día 
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-manos" name="manos" value="120" />
+                        10 minutos por día 
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-manos" name="manos" value="240" />
+                        20 minutos por día 
+                        </label>
+                    </div>
+
+                    <div class="navegacion">
+                    <button class="btn-nav-estilo prev-btn btn-navigation" id="prev_btn_xx"><i class="bi bi-arrow-left"></i> Anterior</button>
+                    <button class="btn-nav-estilo next-btn btn-navigation" id="next_btn_manos">Pr&oacute;ximo <i class="bi bi-arrow-right"></i></button>
+                    </div>
+                </li>  
+                
+                <!-- SLIDE -->
+                <li>
+                    <div class="question-header">
+                        <span class="icon ic_platos_mano">Lavado de platos a mano</span>                              
+                    </div>
+                    <div class="question-text">¿Cuántas veces lavás los platos a mano?</div>
+
+                    <!-- Imagen-->
+                    <div class="imagen_ppal">
+                        <img src="/media-library/lo_bueno_del_agua/simulador/lavar-platos.png">
+                    </div>
+
+                    <!-- preguntas -->
+                    <div class="preguntas">
+                        <label>
+                        <input type="radio" class="option-input radio radio-platos" name="platos" value="60"/>
+                        1 vez por día 
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-platos" name="platos" value="120" />
+                        2 veces por día 
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-platos" name="platos" value="180"/>
+                        3 veces por día 
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-platos" name="platos" value="0"/>
+                        Uso lavavajilla
+                        </label>
+                    </div>
+
+                    <div class="navegacion">
+                    <button class="btn-nav-estilo prev-btn btn-navigation radio-platos" id="prev_btn_xx"><i class="bi bi-arrow-left"></i> Anterior</button>
+                    <button class="btn-nav-estilo next-btn btn-navigation radio-platos" id="next_btn_platos">Pr&oacute;ximo <i class="bi bi-arrow-right"></i></button>
+                    </div>
+                </li>
+
+
+                <!-- SLIDE -->
+                <li>
+                    <div class="question-header">
+                        <span class="icon ic_platos_lavavajillas">Lavado de platos con lavavajilla</span>                              
+                    </div>
+                    <div class="question-text">¿Cuántas veces lavás los platos con lavavajilla?</div>
+
+
+                    <!-- Imagen-->
+                    <div class="imagen_ppal">
+                        <img src="/media-library/lo_bueno_del_agua/simulador/lavavajillas.png">
+                    </div>
+
+                    <!-- preguntas -->
+                    <div class="preguntas">
+                        <label>
+                        <input type="radio" class="option-input radio radio-lavavajillas" name="lavavajillas" value="15"/>
+                        1 carga por día 
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-lavavajillas" name="lavavajillas" value="30" />
+                        2 cargas por día 
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-lavavajillas" name="lavavajillas" value="45"/>
+                        3 cargas por día 
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-lavavajillas" name="lavavajillas" value="0"/>
+                        Los lavo a mano 
+                        </label>
+                    </div>
+
+                    <div class="navegacion">
+                    <button class="btn-nav-estilo prev-btn btn-navigation radio-platos" id="prev_btn_xx"><i class="bi bi-arrow-left"></i> Anterior</button>
+                    <button class="btn-nav-estilo next-btn btn-navigation radio-platos" id="next_btn_lavavajillas">Pr&oacute;ximo <i class="bi bi-arrow-right"></i></button>
+                    </div>
+
+                </li>
+
+
+
+                <!-- SLIDE -->
+                <li>
+                    <div class="question-header">
+                        <span class="icon ic_lavar_frutas">Lavado de frutas y verduras</span>                              
+                    </div>
+                    <div class="question-text">¿Cuánto tiempo te lleva lavar las frutas y las verduras con la canilla abierta?</div>
+
+
+                    <!-- Imagen-->
+                    <div class="imagen_ppal">
+                        <img src="/media-library/lo_bueno_del_agua/simulador/lavar-fruta.png">
+                    </div>
+
+                    <!-- preguntas -->
+                    <div class="preguntas">
+                        <label>
+                        <input type="radio" class="option-input radio radio-frutas" name="frutas" value="40"/>
+                        5 minutos por día 
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-frutas" name="frutas" value="80" />
+                        10 minutos por día 
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-frutas" name="frutas" value="120"/>
+                        15 minutos por día 
+                        </label>                                    
+                    </div>
+
+                    <div class="navegacion">
+                    <button class="btn-nav-estilo prev-btn btn-navigation radio-platos" id="prev_btn_xx"><i class="bi bi-arrow-left"></i> Anterior</button>
+                    <button class="btn-nav-estilo next-btn btn-navigation radio-platos" id="next_btn_frutas">Pr&oacute;ximo <i class="bi bi-arrow-right"></i></button>
+                    </div>
+
+                </li>
+
+                <!-- SLIDE -->
+                <li>
+                    <div class="question-header">
+                        <span class="icon ic_lavarropas">Lavado de la ropa </span>                              
+                    </div>
+                    <div class="question-text">¿Cuántas veces lavás la ropa?</div>
+
+                    <!-- Imagen-->
+                    <div class="imagen_ppal">
+                        <img src="/media-library/lo_bueno_del_agua/simulador/lavarropas.png">
+                    </div>
+
+                    <!-- preguntas -->
+                    <div class="preguntas">
+                        <label>
+                        <input type="radio" class="option-input radio radio-ropa" name="ropa" value="28"/>
+                        2 veces por semana 
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-ropa" name="ropa" value="100" />
+                        1 vez por día 
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-ropa" name="ropa" value="300"/>
+                        3 veces por día 
+                        </label>
+                    </div>
+
+                    <div class="navegacion">
+                    <button class="btn-nav-estilo prev-btn btn-navigation" id="prev_btn_05"><i class="bi bi-arrow-left"></i> Anterior</button>
+                    <button class="btn-nav-estilo next-btn btn-navigation" id="next_btn_ropa">Pr&oacute;ximo <i class="bi bi-arrow-right"></i></button>
+                    </li>
+
+                </li>
+
+                <!-- SLIDE -->
+                <li>
+                    <div class="question-header">
+                        <span class="icon ic_manguera">Lavado del auto </span>                              
+                    </div>
+                    <div class="question-text">¿Cuán seguido lavás el auto?</div>
+
+                    <!-- Imagen-->
+                    <div class="imagen_ppal">
+                        <img src="/media-library/lo_bueno_del_agua/simulador/lavar-auto.png">
+                    </div>
+
+                    <!-- preguntas -->
+                    <div class="preguntas">
+                        <label>
+                        <input type="radio" class="option-input radio radio-auto" name="auto"  value="0" />
+                        No tengo auto 
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-auto" name="auto" value="12" />
+                        1 vez por mes 
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-auto" name="auto" value="24" />
+                        2 veces por mes 
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-auto" name="auto" value="48" />
+                        4 veces por mes 
+                        </label>
+                    </div>
+
+                    <div class="navegacion">
+                    <button class="btn-nav-estilo prev-btn btn-navigation" id="prev_btn_xx"><i class="bi bi-arrow-left"></i> Anterior</button>
+                    <button class="btn-nav-estilo next-btn btn-navigation" id="next_btn_auto">Pr&oacute;ximo <i class="bi bi-arrow-right"></i></button>
+                    </div>
+
+                </li>
+
+
+                <!-- SLIDE -->
+                <li>
+                    <div class="question-header">
+                        <span class="icon ic_llenar_pileta">Llenado de pileta de lona</span>                              
+                    </div>
+                    <div class="question-text">¿Cuántas veces llenás tu pileta de lona?</div>
+
+                    <!-- Imagen-->
+                    <div class="imagen_ppal">
+                        <img src="/media-library/lo_bueno_del_agua/simulador/llenar-pileta-lona.png">
+                    </div>
+
+
+                    <!-- preguntas -->
+                    <div class="preguntas">
+                        <label>
+                        <input type="radio" class="option-input radio radio-pileta_lona" name="pileta_lona" value="-1" />
+                        No tengo pileta 
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-pileta_lona" name="pileta_lona" value="9" />
+                        1 vez al año 
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-pileta_lona" name="pileta_lona" value="18" />
+                        2 veces al año 
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-pileta_lona" name="pileta_lona" value="0" />
+                        Tengo pileta de material 
+                        </label>
+                    </div>
+
+                    <div class="navegacion">
+                    <button class="btn-nav-estilo prev-btn btn-navigation" id="prev_btn_xx"><i class="bi bi-arrow-left"></i> Anterior</button>
+                    <button class="btn-nav-estilo next-btn btn-navigation" id="next_btn_pileta_lona">Pr&oacute;ximo <i class="bi bi-arrow-right"></i></button>
+                    </li>
+
+                </li>
+
+                <!-- SLIDE -->
+                <li>
+                    <div class="question-header">
+                        <span class="icon ic_llenar_pileta">Llenado de pileta de material</span>                              
+                    </div>
+                    <div class="question-text">¿Cuántas veces llenás tu pileta de material?</div>
+
+                    <!-- Imagen-->
+                    <div class="imagen_ppal">
+                        <img src="/media-library/lo_bueno_del_agua/simulador/llenar-pileta.png">
+                    </div>
+
+
+                    <!-- preguntas -->
+                    <div class="preguntas">
+                        <label>
+                        <input type="radio" class="option-input radio radio-pileta_material" name="pileta_material" value="-1" />
+                        No tengo pileta 
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-pileta_material" name="pileta_material" value="167" />
+                        1 vez al año 
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-pileta_material" name="pileta_material" value="334" />
+                        2 veces al año 
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-pileta_material" name="pileta_material" value="0" />
+                        Tengo pileta de lona
+                        </label>
+                    </div>
+
+                    <div class="navegacion">
+                    <button class="btn-nav-estilo prev-btn btn-navigation" id="prev_btn_xx"><i class="bi bi-arrow-left"></i> Anterior</button>
+                    <button class="btn-nav-estilo next-btn btn-navigation" id="next_btn_pileta_material">Pr&oacute;ximo <i class="bi bi-arrow-right"></i></button>
+                    </div>
+
+                </li>
+
+                <!-- SLIDE -->
+                <li>
+                    <div class="question-header">
+                        <span class="icon ic_manguera">Regado de plantas</span>                              
+                    </div>
+                    <div class="question-text">¿Cuánto tiempo tardás en regar las plantas?</div>
+
+                    <!-- Imagen-->
+                    <div class="imagen_ppal">
+                        <img src="/media-library/lo_bueno_del_agua/simulador/regar-plantas.png">
+                    </div>
+
+
+                    <!-- preguntas -->
+                    <div class="preguntas">
+                        <label>
+                        <input type="radio" class="option-input radio radio-plantas" name="plantas" value="0" />
+                        No tengo plantas para regar 
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-plantas" name="plantas" value="17" />
+                        10 minutos por día 
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-plantas" name="plantas" value="34" />
+                        20 minutos por día 
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-plantas" name="plantas" value="68" />
+                        40 minutos por día 
+                        </label>
+                    </div>
+
+                    <div class="navegacion">
+                    <button class="btn-nav-estilo prev-btn btn-navigation" id="prev_btn_xx"><i class="bi bi-arrow-left"></i> Anterior</button>
+
+                    <!-- Este boton se dispara independiente - no lleva 'next-btn' -->
+                    <button class="btn-nav-estilo btn-navigation" id="next_btn_plantas">Pr&oacute;ximo <i class="bi bi-arrow-right"></i></button>
+                    </div>
+
+                </li>
+
+                <!-- SLIDE -->
+                <li>
+                    <div class="question-header resultados">
+                        <span class="icon ic_hogar">Tu consumo de agua</span>
+                    </div>
+
+                    <div class="resultados">
+                        
+                        <!-- <h1 id="consumo_usuario">
+                            Consumís <span class="resaltado">??? litros</span> de agua potable por día
+                        </h1> -->
+
+                        <h1 id="consumo_hogar" style="margin-top: 10px;">                                    
+                            En tu casa se consumen <span class="resaltado">??? litros</span> de agua potable por día
+                        </h1>
+
+                        <h3 id="tipo_consumidor">Tu consumido es <span class="resaltado">???</span></h3>
+
+                        <!-- <h2>El promedio es de 320 litros por día</h2> -->
+                        
+                        <h4>Compartí tu resultado y desafiá a tus seguidores:</h4>
+
+                        <div class="seleccion" id="seleccion">
+                            Cantidad de personas: <span>4</span><br>
+                        </div>    
+                        
+                        <!-- Redes sociales -->
+                        <div class="compartir-redes-sociales">
+
+                            <div style="display: table; margin: 0 auto;">
+                                <div style="display: table-row;">
+                                    <div style="display: table-cell; vertical-align: top;">
+                                        
+                                        <!-- TWITTER BTN ESTATICO-->
+                                        <!-- <a class="twitter-share-button"
+                                        href="https://twitter.com/intent/tweet"
+                                        data-size="large"
+                                        data-text="Mi consumo diario de #agua es de XXX litros. Soy -promedio- ¿Vos cuánto utilizas?."
+                                        data-url="https://aysa.com.ar/lobuenodelagua/simulador/"
+                                        data-hashtags="DiaMundialDelAgua "
+                                        data-via="AySA_Oficial"
+                                        >Tweet</a>      -->
+                                        
+                                        <!-- TWITTER BTN DINAMICO-->
+                                        <span id='btn_twitter'></span>
+                                    </div>
+                                    <div style="display: table-cell; vertical-align: top; padding-left: 20px;">
+                                        <!-- Your share button code -->
+                                        <div class="fb-share-button" 
+                                        data-href="https://aysa.com.ar/lobuenodelagua/simulador" 
+                                        data-layout="button"
+                                        data-size="large"></div>
+                                    
+                                    </div>
+                                </div>
+                            </div><!-- table -->
+                                
+                        </div>
+
+                        <div class="navegacion">
+                             
+                                <button class="btn-nav-estilo" type="submit" id="btn_download_pdf">
+                                    <div style="display: table;">
+                                        <div style="display: table-row;">
+                                            <div style="display: table-cell;">Para mejorar tus consumos o ayudarnos a difundirlos, descargá estos consejos</div>
+                                            <div style="display: table-cell; vertical-align: middle; font-size: 25px; padding-left: 20px;"><i class="bi bi-download"></i></div>
+                                        </div>
+                                    </div>
+                                </button> 
+
+                        </div>
+
+
+                        <div class="resaltado" style="margin-bottom: 30px;">#ValoremosLoEsencial</div>
+
+
+                        <div class="" style="padding-bottom: 20px;">
+                            <button class="btn-nav-estilo" id="btn-volver-inicio"><i class="bi bi-arrow-left"></i> Volver al inicio</button> 
+                        </div>
+                    </div><!-- ./resultados-->
+                    
+
+                </li>                            
+            </ul>
+        </div><!-- .item -->
+    </div><!-- .water_calculator-->
+
+    <!-- WATER CALCULATOR -->
+    
+    
+     <!-- SCRIPTS -->
+     <!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    -->
+    
+    <script src="/media-library/lo_bueno_del_agua/simulador/lightslider.js"></script> 
+    
+    <script>
+    
+    var valoresSeleccion = {
+    hogar_cant_personas: 0,
+    ducha: 0,
+    inmersion: 0,
+    inodoro: 0,
+    manos: 0,
+    lav_platos: 0,
+    lav_lavavajillas: 0,
+    lav_frutas: 0,
+    ropa: 0,
+    auto: 0,
+    pileta_lona: 0,
+    pileta_material: 0,
+    plantas: 0
+}
+
+$(document).ready(function() {   
+
+    // Configuracion de slider
+    var slider = $("#content-slider").lightSlider({
+        item:1,
+        loop:false,
+        keyPress:false,
+        adaptiveHeight: true,
+        autoWidth: false,
+        controls: false,
+        enableTouch: false,
+        enableDrag:false,
+        pager: false,
+        speed:800,    
+        mode: 'slide'        
+    });
+
+    // Slide inicial
+    slider.goToSlide(0)
+    //slider.goToSlide(13)
+
+    // Deshabilita botones de navegacion
+    $(".btn-navigation").prop('disabled', true);
+
+    // Botones
+    // Avanzan y retroceden un slide
+    $(".next-btn").click(function(){
+        slider.goToNextSlide();
+        $("html, body").animate({scrollTop: 0}, 1000);
+
+    });
+
+    $(".prev-btn").click(function(){
+        slider.goToPrevSlide();
+    });
+
+    // Habilita boton 'proximo' si alguno de los items por slide es seleccionado
+    $('.range_cant_personas').on('change', function() {
+
+        // Valor del slider
+        let valor = $(this).val();
+        if (valor > 0) {
+            $("#next_btn_cant_personas").prop('disabled', false);
+            valoresSeleccion.hogar_cant_personas = parseInt(valor)
+        } else {
+            $("#next_btn_cant_personas").prop('disabled', true);
+        }    
+    });
+
+    $(".radio-ducha").on("change", function () {
+        $("#next_btn_ducha").prop("disabled", false);
+    });
+
+    $(".radio-inmersion").on("change", function () {
+        $("#next_btn_inmersion").prop("disabled", false);
+    });
+
+    $(".radio-inodoro").on("change", function () {
+        $("#next_btn_inodoro").prop("disabled", false);
+    });
+
+    $(".radio-manos").on("change", function () {
+        $("#next_btn_manos").prop("disabled", false);
+    });
+
+    $(".radio-platos").on("change", function () {
+        $("#next_btn_platos").prop("disabled", false);
+    });
+
+    $(".radio-lavavajillas").on("change", function () {
+        $("#next_btn_lavavajillas").prop("disabled", false);
+    });
+
+    $(".radio-frutas").on("change", function () {
+        $("#next_btn_frutas").prop("disabled", false);
+    });
+
+    $(".radio-ropa").on("change", function () {
+        $("#next_btn_ropa").prop("disabled", false);
+    });
+
+    $(".radio-auto").on("change", function () {
+        $("#next_btn_auto").prop("disabled", false);
+    });
+
+    $(".radio-pileta_lona").on("change", function () {
+        $("#next_btn_pileta_lona").prop("disabled", false);
+    });
+
+    $(".radio-pileta_material").on("change", function () {
+        $("#next_btn_pileta_material").prop("disabled", false);
+    });
+
+    $(".radio-plantas").on("change", function () {
+        $("#next_btn_plantas").prop("disabled", false);
+    });
+
+    // Refresh de valores cuando se presiona los botones de navegacion
+    $(".btn-navigation").click(function(){   
+        actualizaValoresSeleccion()
+    });
+
+    // Botón de último slide dispara calculo de resultados
+    $("#next_btn_plantas").click(function(){
+        actualizaValoresSeleccion();
+        resultadosSeleccion();    
+        slider.goToNextSlide();
+        $("html, body").animate({scrollTop: 0}, 1000);
+    });
+
+    // Boton de último slide dispara calculo de resultados
+    $("#btn-volver-inicio").click(function(){  
+        reiniciarSimulador()
+    });
+
+    // Boton bajar PDF
+    $("#btn_download_pdf").on("click", function () {        
+        window.open("/media-library/lo_bueno_del_agua/simulador/Consejos_DMA_2021.pdf",'_blank');        
+    });
+
+    // Funciones
+    var reiniciarSimulador = function(){
+        // Reset radio buttons
+        $('input[type=radio]').each(function(i) {
+            if($(this).is(':checked')) {
+                $(this).prop('checked', false);
+            } 
+        });
+
+        // Reset range selector
+        var target = document.querySelector('.value');
+        target.innerHTML = 0; // value
+        $('.range_cant_personas').val(0);
+
+        // Deshabilita botones de navegacion
+        $(".btn-navigation").prop('disabled', true);
+    
+        // Ir a slide inicial
+        slider.goToSlide(0)
+    }
+
+    var actualizaValoresSeleccion = function() {
+        //valoresSeleccion.hogar_cant_personas = "";
+        valoresSeleccion.ducha = parseInt($("input[name='ducha']:checked").val());   
+        valoresSeleccion.inmersion = parseInt($("input[name='inmersion']:checked").val());
+        valoresSeleccion.inodoro = parseInt($("input[name='inodoro']:checked").val());
+        valoresSeleccion.manos = parseInt($("input[name='manos']:checked").val());
+        valoresSeleccion.lav_platos = parseInt($("input[name='platos']:checked").val());
+        valoresSeleccion.lav_lavavajillas = parseInt($("input[name='lavavajillas']:checked").val());
+        valoresSeleccion.lav_frutas = parseInt($("input[name='frutas']:checked").val());
+        valoresSeleccion.ropa = parseInt($("input[name='ropa']:checked").val());
+        valoresSeleccion.auto = parseInt($("input[name='auto']:checked").val());       
+
+        var valorPiletaLona = parseInt($("input[name='pileta_lona']:checked").val());  
+        console.log("valorPiletaLona: " + valorPiletaLona);
+        valoresSeleccion.pileta_lona = (valorPiletaLona === -1) ? 0 : 0;
+
+        var valorPiletaMaterial = parseInt($("input[name='pileta_material']:checked").val());  
+        console.log("valorPiletaMaterial: " + valorPiletaMaterial);
+        valoresSeleccion.pileta_material = (valorPiletaMaterial === -1) ? 0 : 0;
+
+        valoresSeleccion.plantas = parseInt($("input[name='plantas']:checked").val());  
+
+        // Habilito botones "anterior"
+        $(".prev-btn").prop('disabled', false);
+        console.log('Objeto: ', valoresSeleccion)            
+    }
+
+
+    var resultadosSeleccion = function () {
+
+        /* ## Seleccion del usuario */
+        var ducha = "";
+        if (valoresSeleccion.ducha == 50) ducha = "5 minutos";
+        else if (valoresSeleccion.ducha == 100) ducha = "10 minutos";
+        else ducha = "15 minutos";
+
+        var inmersion = "";
+        if (valoresSeleccion.inmersion == 35) inmersion = "1 vez por semana";
+        else if (valoresSeleccion.inmersion == 70) inmersion = "2 veces por semana";
+        else inmersion = "Nunca";
+
+        var inodoro = "";
+        if (valoresSeleccion.inodoro == 24) inodoro = "2 veces por día";
+        else if (valoresSeleccion.inodoro == 48) inodoro = "4 veces por día";
+        else inodoro = "8 veces por día";
+
+        var manos = "";
+        if (valoresSeleccion.manos == 36) manos = "3 min. por día";
+        else if (valoresSeleccion.manos == 60) manos = "5 min. por día";
+        else if (valoresSeleccion.manos == 120) manos = "10 min. por día";
+        else manos = "20 minutos por día";
+
+        var platos = "";
+        if (valoresSeleccion.lav_platos == 60) platos = "1 vez por día";
+        else if (valoresSeleccion.lav_platos == 120) platos = "2 veces por día";
+        else if (valoresSeleccion.lav_platos == 180) platos = "3 veces por día";
+        else platos = "Uso de lavavajilla";
+
+        var lavavajilla = "";
+        if (valoresSeleccion.lav_lavavajillas == 15) lavavajilla = "1 carga por día";
+        else if (valoresSeleccion.lav_lavavajillas == 30) lavavajilla = "2 cargas por día";
+        else if (valoresSeleccion.lav_lavavajillas == 45) lavavajilla = "3 cargas por día";
+        else lavavajilla = "Los lavo a mano";
+
+        var frutas = "";
+        if (valoresSeleccion.lav_frutas == 40) frutas = "5 minutos por día";
+        else if (valoresSeleccion.lav_frutas == 80) frutas = "10 min. por día";
+        else frutas = "15 minutos por día";
+
+        var ropa = "";
+        if (valoresSeleccion.ropa == 28) ropa = "2 veces por semana";
+        else if (valoresSeleccion.ropa == 100) ropa = "1 vez por día";
+        else ropa = "3 veces por día";
+
+        var auto = "";
+        if (valoresSeleccion.auto == 12)  auto = "1 vez por mes";
+        else if (valoresSeleccion.auto == 24)  auto = "2 veces por mes";
+        else if (valoresSeleccion.auto == 48)  auto = "4 veces por mes";
+        else auto = "No tengo auto";
+
+        var pileta_lona = "";
+        if (valoresSeleccion.pileta_lona == -1)  pileta_lona = "No tengo pileta de material";
+        else if (valoresSeleccion.pileta_lona == 9)  pileta_lona = "1 vez al año";
+        else if (valoresSeleccion.pileta_lona == 18)  pileta_lona = "2 veces al año";
+        else pileta_lona = "No tengo pileta";
+
+
+        var pileta_material = "";
+        if (valoresSeleccion.pileta_material == -1)  pileta_material = "No tengo pileta de lona";
+        else if (valoresSeleccion.pileta_material == 167)  pileta_material = "1 vez al año";
+        else if (valoresSeleccion.pileta_material == 334)  pileta_material = "2 veces al año";
+        else pileta_material = "No tengo pileta";
+
+        var plantas = "";
+        if (valoresSeleccion.plantas == 17) plantas = "10 minutos por día";
+        else if (valoresSeleccion.plantas == 34) plantas = "20 minutos por día";
+        else if (valoresSeleccion.plantas == 68) plantas = "40 minutos por día";
+        else plantas = "No tengo plantas";
+
+        var texto =
+            "Cantidad de personas: <span>" + valoresSeleccion.hogar_cant_personas +"</span><br>" +
+            "Tiempo en la ducha: <span>" + ducha +"</span><br>" +
+            "Baño de inmersion: <span>" + inmersion +"</span><br>" +
+            "Descarga de inodoro: <span>" + inodoro +"</span><br>" +
+            "Lavado de manos: <span>" + manos +"</span><br>" +
+            "Lavado de platos a mano: <span>" + platos +"</span><br>" +
+            "Lavado con lavavajillas: <span>" + lavavajilla +"</span><br>" +
+            "Lavado de frutas/verduras: <span>" + frutas +"</span><br>" +
+            "Lavado de ropa: <span>" + ropa +"</span><br>" +
+            "Lavado de auto: <span>" + auto +"</span><br>" +
+            "Llenado de pileta lona: <span>" + pileta_lona +"</span><br>" +
+            "Llenado de pileta material: <span>" + pileta_material +"</span><br>" +
+            "Regado de plantas: <span>" + plantas +"</span><br>";
+
+            $("#seleccion").html(texto);
+
+        
+        /* ## Litros consumidos por usuario */
+
+        var consumoIndividual = valoresSeleccion.ducha + valoresSeleccion.inmersion + valoresSeleccion.inodoro + valoresSeleccion.manos;
+
+        var consumoGeneral = valoresSeleccion.lav_platos + valoresSeleccion.lav_lavavajillas + valoresSeleccion.lav_frutas + valoresSeleccion.ropa + valoresSeleccion.auto + valoresSeleccion.pileta_lona + valoresSeleccion.pileta_material + valoresSeleccion.plantas;
+
+        var consumoPersonal =  consumoIndividual + consumoGeneral;
+        console.log("consumoPersonal: ", consumoPersonal)
+
+        var consumoHogar = (consumoIndividual * valoresSeleccion.hogar_cant_personas) + consumoGeneral;
+
+        var tipoConsumidor = "";
+        if (consumoPersonal <= 250) 
+            tipoConsumidor = "Responsable";
+        else if (consumoPersonal > 250 && consumoPersonal <= 350) 
+            tipoConsumidor = "Promedio";
+        else 
+            tipoConsumidor = "Derrochador";
+
+        //$('#consumo_usuario').html("Consumís <span class='resaltado'>"+consumoPersonal+" litros </span> de agua potable por día");
+
+        $('#consumo_hogar').html("En tu casa se consumen <span class='resaltado'>"+consumoHogar+" litros</span> de agua potable por día");
+        
+        $('#tipo_consumidor').html("Tu consumo es <span class='resaltado'>"+tipoConsumidor+"</span>");
+
+        // Twitter
+        var title = 'Mi consumo diario de #agua es de '+consumoPersonal+' litros. Soy '+tipoConsumidor+'. ¿Vos cuánta usás?';
+        var share_url = 'https://aysa.com.ar/lobuenodelagua/simulador';
+        var hashtags = 'Water2Me'; // Agregar mas hashtags separados por comas
+        $('#btn_twitter').html('<a href="https://twitter.com/share" class="twitter-share-button" data-url="' + share_url +'" data-size="large" data-text="' + title + '" data-hashtags="'+hashtags+'" data-via="AySA_Oficial" data-count="none">Tweet</a>');
+        twttr.widgets.load();
+    }
+});
+
+
+/* Range slider */
+var elem = document.querySelector('input[type="range"]');
+
+var rangeValue = function(){
+    var newValue = elem.value;
+    var target = document.querySelector('.value');
+    target.innerHTML = newValue;
+}
+
+elem.addEventListener("input", rangeValue);
+    
+    
+    </script>   
+    
+</body>
+</html>

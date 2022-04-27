@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>AQUAS</title>
+    <meta name="author" content="Yamila Zarate">
+   
+    <link rel="shortcut icon" href="icono.png">
+    <style type="text/css">
+      /* inicio del estilo para mi menu horizontal*/
+      nav.horizontal{
+        background-color:#7B7BB2;
+      }
+      nav.horizontal ul {
+        list-style-type: none;
+        padding: 5px;
+        overflow: auto;
+      } 
+      nav.horizontal ul li {
+        float: left;} 
+
+      nav.horizontal ul li a {
+        display: inline-block;
+        background-color: #FFFFFF;
+        color: #24243B;
+        font-weight:bold ;
+        text-decoration: none;
+        padding: 10px;
+        margin-right: 5px;
+       }
+      nav.horizontal ul li a:hover{
+        background-color: #24243B;
+        color: #FFFFFF;
+        cursor: pointer;
+        text-shadow: 5px 5px 5px #282980 ;
+      }
+  
+      nav.horizontal div.dropdown-content{
+        position: absolute;
+        background-color: #7B7BB2;
+        z-index: auto;
+        box-shadow: 5px 5px 5px #282980 ;
+        display: none;
+      }
+
+      nav.horizontal div.dropdown-content ul li{
+        float: none;
+      }
+
+      nav.horizontal div.dropdown-content ul li a{
+        display: block;
+      }
+
+      nav.horizontal li.dropdown:hover div.dropdown-content{
+        display: block;
+        background-color: #7B7BB2;
+        cursor: pointer;
+      }
+        /* Fin de los Estilos Para el menu horizontal
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      
+    </nav>
+    <!-- Aquí empieza el encabezado principal que se mantendrá en todas las páginas del sitio web -->
+
+    <header>
+     
+    </header>
+
+    <nav class="horizontal">
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Quienes Somos</a></li>
+        <li class="dropdown">
+          <a href="#">Productos</a>
+            <div class="dropdown-content">
+                <ul>
+                  <li><a href="#">Computadoras</a></li>
+                  <li><a href="#">Monitores</a></li>
+                  <li><a href="#">Perifericos</a></li>
+                </ul>
+            </div>
+          </li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+    <br>
+ 
+    <!-- Y aquí está nuestro pie de página principal que se utiliza en todas las páginas de nuestro sitio web -->
+    <footer>
+     
+    </footer>
+
+  </body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>AQUAS </title>
+    <meta name="author" content="Yamila Zarate">
+   
+    <link rel="shortcut icon" href="">
+    <img src="../../css/logo.png" width="80px" height="80px">
+
+
+    <style type="text/css">
+      /* inicio del estilo para mi menu horizontal*/
+      nav.horizontal{
+        background-color:#008f39;
+      }
+      nav.horizontal ul {
+        list-style-type: none;
+        padding: 5px;
+        overflow: auto;
+      } 
+      nav.horizontal ul li {
+        float: left;} 
+
+      nav.horizontal ul li a {
+        display: inline-block;
+        background-color: #FFFFFF;
+        color: #24243B;
+        font-weight:bold ;
+        text-decoration: none;
+        padding: 10px;
+        margin-right: 5px;
+       }
+      nav.horizontal ul li a:hover{
+        background-color: #24243B;
+        color: #FFFFFF;
+        cursor: pointer;
+        text-shadow: 5px 5px 5px #282980 ;
+      }
+  
+      nav.horizontal div.dropdown-content{
+        position: absolute;
+        background-color: #008f39;
+        z-index: auto;
+        box-shadow: 5px 5px 5px #282980 ;
+        display: none;
+      }
+
+      nav.horizontal div.dropdown-content ul li{
+        float: none;
+      }
+
+      nav.horizontal div.dropdown-content ul li a{
+        display: block;
+      }
+
+      nav.horizontal li.dropdown:hover div.dropdown-content{
+        display: block;
+        background-color: #008f39;
+        cursor: pointer;
+      }
+      #logo {
+        width: 200px;
+        padding-left: 30px;
+        padding-top: 5px;
+        position: absolute;
+      }
+      .logo {
+        min-width: 200px;
+        min-height: 140px;
+        position: absolute;
+        left:0;
+      }
+
+        /* Fin de los Estilos Para el menu horizontal
+    </style>
+  </head>
+
+  <body>
+    <!-- Aquí empieza el encabezado principal que se mantendrá en todas las páginas del sitio web -->
+
+    <header>
+
+    </header>
+
+    <nav class="horizontal">
+      <ul>
+        <li><a href="#">Inicio</a></li>
+
+        <li class="dropdown">
+          <a href="#">Clientes</a>
+            <div class="dropdown-content">
+                <ul>
+                  <li><a href="#">Facturacion</a></li>
+                  <li><a href="#">Simulador</a></li>
+                  <li><a href="#">Gestion de Pagos</a></li>
+                  <li><a href="#">Consumos</a></li>
+                </ul>
+            </div>
+          </li>
+        <li class="dropdown">
+          <a href="#">Empleados</a>
+            <div class="dropdown-content">
+                <ul>
+                  <li><a href="#">Registro del Medidor</a></li>
+                  <li><a href="#">Facturacion</a></li>
+                  <li><a href="#">Gestion de Pagos</a></li>
+                  <li><a href="#">Medidores</a></li>
+                </ul>
+            </div>
+          </li>
+        <li class="dropdown">
+          <a href="#">Gestion de Servicios</a>
+            <div class="dropdown-content">
+                <ul>
+                  <li><a href="#">Tipos de servicios</a></li>
+                  <li><a href="#">Categorias</a></li>
+                </ul>
+            </div>
+          </li>
+        <li class="dropdown">
+          <a href="#">Gestion de Usuarios</a>
+            <div class="dropdown-content">
+                <ul>
+                  <li><a href="#">Usuarios</a></li>
+                  <li><a href="#">Empleados</a></li>
+                  <li><a href="#">Clientes</a></li>
+                  <li><a href="#">Perfiles</a></li>
+
+                </ul>
+            </div>
+          </li>
+        <li><a href="#">Contacto</a></li>
+        <li><a href="#">CERRA SESION</a></li>
+
+      </ul>
+    </nav>
+    <br><br>
+
+
+ 
+    <!-- Y aquí está nuestro pie de página principal que se utiliza en todas las páginas de nuestro sitio web -->
+    <footer>
+     
+    </footer>
+
+  </body>
+</html>

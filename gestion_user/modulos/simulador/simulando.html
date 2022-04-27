@@ -1,0 +1,1921 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+<head>
+    
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Simulador de consumo de agua">
+		<meta name="author" content="">
+		<link rel="icon" href="/media-library/imagenes_inicio/favicon.ico">
+
+        <title>AySA - Simulador de consumo de agua</title>
+
+        
+            <!-- Google Tag Manager -->
+            <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-WZW4J7L');</script>
+            <!-- End Google Tag Manager --> 
+
+        <script src="/assets/js/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+        <script src="/assets/js/bootstrap-3.3.7.min.js" crossorigin="anonymous"></script>
+         
+        <link rel="stylesheet" href="/assets/css/bootstrap-3.3.7.min.css">
+        <link rel="stylesheet" href="/assets/css/all.min.css">
+        <link rel="stylesheet" href="/assets/css/v4-shims.min.css">
+        <link rel="stylesheet" href="/assets/css/themify-icons.css">
+        <link rel="stylesheet" href="/assets/css/Roboto-Condensed-300-400-700-700i.css">
+        <link rel="stylesheet" href="/assets/css/Roboto-300-400-500-700.css">
+
+
+
+    <style>
+    
+    </style>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) --> 
+            <!-- Google Tag Manager (noscript) -->
+            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WZW4J7L"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+            <!-- End Google Tag Manager (noscript) -->
+                <div>
+
+
+    
+            <span style="display:block;" class="">
+    
+
+
+        <!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>Simulador de consumo de agua</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">  
+    
+      <link rel="stylesheet"  href="/media-library/lo_bueno_del_agua/simulador/lightslider.min.css"/>        
+    
+    <!-- ### ESTILOS -->
+    <style>
+    
+    html {
+    height: 100%;
+}
+body {
+    min-height: 100%;
+    background: url("/media-library/lo_bueno_del_agua/simulador/fondo_simulador.png")
+        no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Contenedor de fondo */
+.water_calculator {
+    width: 100%;
+    height: 100%;
+    /* background: url("img/fondo_simulador.png") no-repeat center center fixed; */
+    /* background-size: cover; */
+}
+
+/* Contenedor de contenido */
+.water_calculator .contenedor-contenido {
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100%;
+    max-width: 900px;
+    font-size: 16px; /* Fuente base */
+    font-family: "Roboto", sans-serif;
+}
+
+.water_calculator .navegacion {
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+.water_calculator ul.wcalculator {
+    list-style: none outside none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.water_calculator .content-slider li {
+    /*background-color: #eee;*/
+    text-align: center;
+}
+
+.water_calculator .content-slider .question-header {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    font-weight: 400;
+    color: #00bcb6;
+    border-bottom: 2px solid #00bcb6;
+    font-size: 1.725em;
+    line-height: 30px;
+}
+
+.water_calculator .content-slider .question-header.resultados {
+    font-family: "Pacifico", cursive;
+}
+
+.water_calculator .content-slider .question-header span.icon {
+    height: 40px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    padding-left: 48px;
+    margin: 0 auto;
+    line-height: 40px;
+    text-align: left;
+    color: #f9fdfe;
+}
+
+.water_calculator .content-slider .question-header span.icon.no_icon {
+    padding-left: 0;
+}
+
+.water_calculator .content-slider .question-header span.icon.ic_hogar {
+    background-image: url("/media-library/lo_bueno_del_agua/simulador/ic-hogar.png");
+}
+
+.water_calculator .content-slider .question-header span.icon.ic_ducha {
+    /* background-image: url(img/ic-ducha.png); */
+    background-image: url("/media-library/lo_bueno_del_agua/simulador/ic-ducha.png");
+}
+
+.water_calculator .content-slider .question-header span.icon.ic_inmersion {
+    /* background-image: url(img/ic-inmersion.png); */
+    background-image: url("/media-library/lo_bueno_del_agua/simulador/ic-inmersion.png");
+}
+
+.water_calculator .content-slider .question-header span.icon.ic_inodoro {
+    /* background-image: url(img/ic-inmersion.png); */
+    background-image: url("/media-library/lo_bueno_del_agua/simulador/ic-inodoro.png");
+}
+
+.water_calculator .content-slider .question-header span.icon.ic_manos {
+    background-image: url("/media-library/lo_bueno_del_agua/simulador/ic-lavar-manos.png");
+}
+
+.water_calculator .content-slider .question-header span.icon.ic_platos_mano {
+    background-image: url("/media-library/lo_bueno_del_agua/simulador/ic-lavar-platos.png");
+}
+
+.water_calculator
+    .content-slider
+    .question-header
+    span.icon.ic_platos_lavavajillas {
+    background-image: url("/media-library/lo_bueno_del_agua/simulador/ic-lavavajilla.png");
+}
+
+.water_calculator .content-slider .question-header span.icon.ic_lavar_frutas {
+    background-image: url("/media-library/lo_bueno_del_agua/simulador/ic-lavar-fruta.png");
+}
+
+.water_calculator .content-slider .question-header span.icon.ic_lavarropas {
+    background-image: url("/media-library/lo_bueno_del_agua/simulador/ic-lavarropas.png");
+}
+
+.water_calculator .content-slider .question-header span.icon.ic_manguera {
+    background-image: url("/media-library/lo_bueno_del_agua/simulador/ic-manguera.png");
+}
+
+.water_calculator .content-slider .question-header span.icon.ic_llenar_pileta {
+    background-image: url("/media-library/lo_bueno_del_agua/simulador/ic-llenar-pileta.png");
+}
+
+.water_calculator .content-slider .question-text {
+    font-family: "Pacifico", cursive;
+    color: #063b81;
+    width: 100%;
+    font-size: 35px;
+    line-height: 1.3625em;
+}
+
+.water_calculator .content-slider .question-text .nota {
+    display: block;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    margin-top: -2px;
+}
+
+.water_calculator .inicio_logo_aysa {
+}
+
+.water_calculator .inicio_titulo {
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    margin-top: 30px;
+    color: #063b81;
+}
+
+.water_calculator .inicio_titulo h5 {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.1875em;
+}
+.water_calculator .inicio_titulo h4 {
+    color: #ffffff;
+    font-size: 26px;
+    font-weight: 600;
+    margin-top: -4px;
+}
+.water_calculator .inicio_titulo h1 {
+    font-family: "Pacifico", cursive;
+    font-size: 39px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+
+.water_calculator .inicio_nota {
+    font-size: 11px;
+    padding: 5px;
+    max-width: 470px;
+    width: 80%;
+    margin: 0 auto;
+    color: #4a4a4a;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.water_calculator .imagen_ppal {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.water_calculator .imagen_ppal img {
+    width: 280px;
+    height: 233px;
+}
+.water_calculator .imagen_ppal.inicio {
+    margin-top: 10px;
+}
+.water_calculator .imagen_ppal.inicio img {
+    width: 280px;
+    height: 233px;
+}
+
+/* Area preguntas - checkbox */
+.water_calculator .preguntas {
+    text-align: left;
+    margin-top: 30px;
+    display: inline-block;
+}
+.water_calculator .preguntas label {
+    font-size: 19px;
+    color: #063b81;
+    font-weight: 600;
+    display: inline-block;
+    margin-right: 10px;
+    font-family: "Roboto Condensed", sans-serif;
+}
+.water_calculator .preguntas label input {
+    margin-right: 3px;
+}
+
+/* Estilos RADIOS BUTTONS */
+@keyframes click-wave {
+    0% {
+        height: 40px;
+        width: 40px;
+        opacity: 0.35;
+        position: relative;
+    }
+    100% {
+        height: 200px;
+        width: 200px;
+        margin-left: -80px;
+        margin-top: -80px;
+        opacity: 0;
+    }
+}
+
+.water_calculator .option-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    position: relative;
+    top: 13.33333px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 40px;
+    width: 40px;
+    transition: all 0.15s ease-out 0s;
+    background: #efedf2;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 0.5rem;
+    outline: none;
+    position: relative;
+    z-index: 1000;
+}
+.water_calculator .option-input:hover {
+    background: #dfdfdf;
+}
+.water_calculator .option-input:checked {
+    background: #7ebf47;
+}
+.water_calculator .option-input:checked::before {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    content: "✔";
+    display: inline-block;
+    font-size: 26.66667px;
+    text-align: center;
+    line-height: 40px;
+}
+.water_calculator .option-input:checked::after {
+    -webkit-animation: click-wave 0.65s;
+    -moz-animation: click-wave 0.65s;
+    animation: click-wave 0.65s;
+    background: #40e0d0;
+    content: "";
+    display: block;
+    position: relative;
+    z-index: 100;
+}
+.water_calculator .option-input.radio {
+    border-radius: 50%;
+}
+.water_calculator .option-input.radio::after {
+    border-radius: 50%;
+}
+.water_calculator .option-input.radio:focus {
+    outline: none;
+}
+
+/* ESTILOS RANGE SLIDER */
+.water_calculator .value {
+    border-bottom: 4px dashed #00b9f1;
+    text-align: center;
+    font-weight: bold;
+    font-size: 5em;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    letter-spacing: -0.07em;
+    text-shadow: white 2px 2px 2px;
+    color: #063b81;
+}
+.water_calculator input[type="range"] {
+    display: block;
+    -webkit-appearance: none;
+    background-color: #063b81;
+    width: 300px;
+    height: 5px;
+    border-radius: 5px;
+    margin: 0 auto;
+    outline: 0;
+}
+.water_calculator input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: #00b9f1;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #063b81;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.water_calculator ​ input[type="range"]::-webkit-slider-thumb:hover {
+    background-color: white;
+    border: 2px solid #00b9f1;
+}
+.water_calculator input[type="range"]::-webkit-slider-thumb:active {
+    transform: scale(1.6);
+}
+
+/* Estilos botones de navecacion */
+
+.water_calculator button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: "Noto Serif", serif;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.water_calculator button.btn-nav-estilo {
+    /* font-weight: 600; */
+    color: #fff;
+    /* text-transform: uppercase; */
+    /* padding: 1.25em 2em; */
+    padding: 0.7em 1.2em;
+    background: #00b9f1;
+    /* border: 2px solid #b18597; */
+    border: 2px solid #0072bc;
+    border-radius: 0.75em;
+    transform-style: preserve-3d;
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1),
+        background 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+.water_calculator button.btn-nav-estilo::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #1188d6;
+    border-radius: inherit;
+    /* box-shadow: 0 0 0 2px #0072bc, 0 0.625em 0 0 #b7d4db; */
+    transform: translate3d(0, 0.75em, -1em);
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1),
+        box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+.water_calculator button.btn-nav-estilo:hover {
+    background: #00b9f1;
+    transform: translate(0, 0.25em);
+}
+.water_calculator button.btn-nav-estilo:hover::before {
+    /* box-shadow: 0 0 0 2px #0072bc, 0 0.5em 0 0 #b7d4db; */
+    transform: translate3d(0, 0.5em, -1em);
+}
+.water_calculator button.btn-nav-estilo:active {
+    background: #00b9f1;
+    transform: translate(0em, 0.75em);
+}
+.water_calculator button.btn-nav-estilo:active::before {
+    box-shadow: 0 0 0 2px #0072bc, 0 0 #b7d4db;
+    transform: translate3d(0, 0, -1em);
+}
+/////////////////////////////////////////////////////////////////////////////////////////////
+.water_calculator .resultados {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+.water_calculator .resultados h1,
+.water_calculator .resultados h2,
+.water_calculator .resultados h3 {
+    margin: 0;
+}
+
+.water_calculator .resultados h1 {
+    font-weight: 600;
+    color: #063b81;
+    font-size: 1.625em;
+    line-height: 32px;
+}
+
+.water_calculator .resultados h1 span {
+    color: #fff;
+}
+
+.water_calculator .resultados h2 {
+    padding: 8px 40px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #33afe2;
+    margin-top: 10px;
+    font-size: 20px;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.water_calculator .resultados h3 {
+    font-weight: 600;
+    color: #063b81;
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.water_calculator .resultados h3 span {
+    color: #fff;
+}
+
+.water_calculator .resultados h4 {
+    font-weight: 600;
+    color: #063b81;
+    font-size: 20px;
+    margin-top: 40px;
+}
+
+.water_calculator .resultados .resaltado {
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-size: 37px;
+    color: #fff;
+}
+
+.water_calculator .resultados .seleccion {
+    /* border: 1px solid rgba(14, 72, 115, 0.4); */
+    display: none;
+    border: 2px solid #009bdb;
+    font-size: 16px;
+    padding: 10px 15px;
+    margin-top: 20px;
+    text-align: left;
+    margin: 0 auto;
+    max-width: 400px;
+    width: 100%;
+    color: #063b81;
+    font-weight: 400;
+}
+
+.water_calculator .resultados .seleccion span {
+    color: #4a4a4a;
+}
+
+.water_calculator .resultados .navegacion {
+    max-width: 400px;
+    width: 95%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.water_calculator .resultados .compartir-redes-sociales {
+    margin-top: 20px;
+}
+
+/* ############## MEDIA 800px */
+@media (max-width: 800px) {
+    /* Preguntas en vertical */
+    .water_calculator .preguntas label {
+        display: block;
+    }
+}
+
+/* ############## MEDIA 480*/
+@media screen and (max-width: 480px) {
+    .water_calculator .contenedor-contenido {
+        width: 100%;
+        padding-top: 10px;
+    }
+
+    .water_calculator .content-slider .question-header {
+        font-size: 20px;
+    }
+
+    .water_calculator button {
+        font-size: 17px;
+    }
+
+    .water_calculator .inicio_nota {
+        font-size: 11px;
+    }
+    .water_calculator .inicio_texo {
+        font-size: 15px;
+    }
+    .water_calculator .inicio_titulo h1 {
+        font-size: 33px;
+    }
+
+    .water_calculator .content-slider .question-text {
+        font-size: 33px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .water_calculator .content-slider .question-text .nota {
+        font-size: 16px;
+        margin-top: 7px;
+        line-height: 22px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .water_calculator .imagen_ppal {
+        margin-top: 30px;
+    }
+
+    .water_calculator .imagen_ppal img {
+        width: 250px;
+        height: 208px;
+    }
+    .water_calculator .imagen_ppal.inicio {
+        margin-top: 30px;
+    }
+    .water_calculator .imagen_ppal.inicio img {
+        width: 250px;
+        height: 208px;
+    }
+
+    .water_calculator .content-slider .question-header {
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+    }
+
+    /* Format resultados finales */
+    .water_calculator .resultados h1 {
+        font-weight: 600;
+        color: #0e4873;
+        font-size: 21px;
+        line-height: 26px;
+        margin-top: 20px !important;
+    }
+    .water_calculator .resultados h2 {
+        font-weight: 600;
+        margin-top: 20px;
+        font-size: 19px;
+    }
+
+    .water_calculator .resultados h3 {
+        font-size: 28px;
+    }
+
+    .water_calculator .resultados h4 {
+        font-size: 19px;
+        margin-top: 40px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .water_calculator .resultados .resaltado {
+        font-size: 27px;
+    }
+
+    .water_calculator button {
+        font-size: 14px;
+    }
+
+    .water_calculator button.inicio {
+        font-size: 17px;
+    }
+
+    .water_calculator .water_calculator .resultados h3 {
+        font-weight: 600;
+        color: #0e4873;
+        font-size: 21px;
+        margin-top: 20px;
+    }
+
+    .water_calculator .resultados .seleccion {
+        border: 2px solid rgba(14, 72, 115, 0.4);
+        font-size: 13px;
+        padding: 10px 15px;
+        margin-top: 20px;
+        text-align: left;
+        margin: 0 auto;
+        max-width: 400px;
+        width: 100%;
+        color: #0e4873;
+        font-weight: 600;
+    }
+
+    .water_calculator .resultados .seleccion span {
+        color: #4a4a4a;
+    }
+}
+
+/* ############## MEDIA 370*/
+@media screen and (max-width: 370px) {
+    .water_calculator .contenedor-contenido {
+        padding-top: 10px;
+    }
+    .water_calculator .inicio_texo {
+        font-size: 10px;
+    }
+
+    .water_calculator .inicio_logo_aysa img {
+        width: 150px;
+    }
+    .water_calculator .inicio_titulo {
+        margin-top: 20px;
+    }
+    .water_calculator .inicio_titulo h1 {
+        font-size: 30px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    .water_calculator .inicio_titulo h5 {
+        font-size: 15px;
+    }
+    .water_calculator .inicio_titulo h4 {
+        font-size: 20px;
+    }
+
+    .water_calculator .imagen_ppal {
+        margin-top: 30px;
+    }
+
+    .water_calculator .imagen_ppal img {
+        width: 230px;
+        height: 191px;
+    }
+    .water_calculator .imagen_ppal.inicio {
+        margin-top: 30px;
+    }
+    .water_calculator .imagen_ppal.inicio img {
+        width: 230px;
+        height: 191px;
+    }
+    .water_calculator .inicio_texo {
+        font-size: 12px;
+    }
+    .water_calculator .inicio_nota {
+        font-size: 9px;
+    }
+    .water_calculator .content-slider .question-header {
+        width: 100%;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        font-size: 20px;
+        /*background-color: #ddd;*/
+    }
+
+    .water_calculator .value {
+        font-size: 60px;
+    }
+    .water_calculator .imagen_ppal img {
+        width: 210px;
+        height: 171px;
+    }
+
+    .water_calculator .preguntas {
+        margin-top: 10px;
+    }
+
+    .water_calculator .navegacion {
+        padding: 20px;
+    }
+
+    .water_calculator .content-slider .question-header.resultados {
+        font-family: "Pacifico", cursive;
+    }
+
+    .water_calculator .content-slider .question-header span.icon {
+        height: 30px;
+        display: inline-block;
+        background-repeat: no-repeat;
+        background-size: 30px 30px;
+        padding-left: 43px;
+        margin: 0 auto;
+        line-height: 30px;
+        text-align: left;
+        color: #f9fdfe;
+    }
+    .water_calculator .content-slider .question-text {
+        font-size: 28px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    /* Format resultados finales */
+
+    .water_calculator .content-slider .question-header.resultados {
+        font-size: 23px;
+        padding-bottom: 10px;
+    }
+
+    .water_calculator .resultados h1 {
+        font-weight: 600;
+        color: #0e4873;
+        font-size: 21px;
+        line-height: 26px;
+    }
+    .water_calculator .resultados h2 {
+        font-weight: 600;
+        margin-top: 20px;
+        font-size: 19px;
+    }
+
+    .water_calculator .resultados h3 {
+        font-weight: 600;
+        color: #0e4873;
+        font-size: 29px;
+        margin-top: 20px;
+    }
+
+    .water_calculator .resultados h4 {
+        font-size: 16px;
+        margin-top: 40px;
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+
+    .water_calculator .resultados .resaltado {
+        font-size: 32px;
+    }
+
+    .water_calculator button {
+        font-size: 14px;
+    }
+    .water_calculator button.inicio {
+        font-size: 15px;
+    }
+
+    .water_calculator .resultados .seleccion {
+        border: 2px solid rgba(14, 72, 115, 0.4);
+        font-size: 13px;
+        padding: 10px 15px;
+        margin-top: 20px;
+        text-align: left;
+        margin: 0 auto;
+        max-width: 400px;
+        width: 100%;
+        color: #0e4873;
+        font-weight: 600;
+    }
+
+    .water_calculator .resultados .seleccion span {
+        color: #4a4a4a;
+    }
+}
+    
+    </style>
+    
+</head>
+
+<body>
+
+    <!-- TWITTER -->
+    <script>window.twttr = (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {};
+        if (d.getElementById(id)) return t;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
+
+        t._e = [];
+        t.ready = function(f) {
+        t._e.push(f);
+        };
+
+        return t;
+    }(document, "script", "twitter-wjs"));</script>     
+    
+    
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v3.0";
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+
+    <!-- WATER CALCULATOR -->
+    <div class="water_calculator">      
+        <div class="contenedor-contenido">
+            <ul id="content-slider" class="content-slider wcalculator">
+
+                <!-- SLIDE -->
+                <li>
+                    <div class="inicio_logo_aysa">
+                        <img src="/media-library/lo_bueno_del_agua/simulador/logo.png" alt="AySA - Lo bueno del agua llega.">
+                    </div>
+
+                    <div class="inicio_titulo">
+                        
+                        <h1>"Simulador de consumo de agua"</h1>
+                    </div>
+
+                    <!-- Imagen-->
+                    <div class="imagen_ppal inicio">
+                        <img src="/media-library/lo_bueno_del_agua/simulador/Inicio.png">
+                    </div>
+                    
+                        <div class="inicio_texo">
+                        El agua es un bien ambiental, social y cultural, fundamental.<br>
+                        Está presente en forma permanente en nuestras vidas.<br>
+                        Te invitamos a descubrir cuánta agua consumís por día y reflexionar sobre el valor que le damos a este recurso vital. 
+                        </div>
+
+                        <div class="inicio_boton">
+                        <button class="btn-nav-estilo next-btn inicio" id="">¡Descubrí cuánta agua consumís!</button>
+                        </div>
+
+
+                        <div class="inicio_nota">                                    
+                        Los datos de la simulación de consumo son aproximados y pueden variar según la zona, la construcción, la presión y las instalaciones internas.                                    
+                        </div>
+                    </li>
+
+                <!-- SLIDE -->
+                <li>
+                    <div class="question-header">
+                            <span class="icon ic_hogar">Hogar</span>                              
+                    </div>
+                    <div class="question-text">¿Cuántas personas viven en tu casa?</div>
+
+                    <!-- Imagen-->
+                    <div class="imagen_ppal">
+                        <img src="/media-library/lo_bueno_del_agua/simulador/hogar.png">                        
+                    </div>
+
+                    <!-- Range slider -->
+                    <div class="value">0</div>
+                    <input type="range" min="0" max="20" step="1" value="0" class="range_cant_personas">
+                                
+                    
+                    <div class="navegacion">
+                    <button class="btn-nav-estilo prev-btn" id="prev_btn_xx"><i class="bi bi-arrow-left"></i> Anterior</button>
+                    <button class="btn-nav-estilo next-btn btn-navigation" id="next_btn_cant_personas">Pr&oacute;ximo <i class="bi bi-arrow-right"></i></button>
+                    </div>                   
+
+                    </li>
+                
+
+                <!-- SLIDE -->
+                <li>
+                    <div class="question-header">
+                        <span class="icon ic_ducha">Ducha</span>                              
+                    </div>
+                    <div class="question-text">¿Cuánto tiempo tardan en bañarse en tu casa?</div>
+
+                    <!-- Imagen-->
+                    <div class="imagen_ppal">
+                        <img src="/media-library/lo_bueno_del_agua/simulador/ducha.png">
+                    </div>
+
+                    <!-- preguntas -->
+                    <div class="preguntas">
+                        <label>
+                        <input type="radio" class="option-input radio radio-ducha" name="ducha" value="50" />
+                        5 minutos
+                        </label>
+                       
+                        <label>
+                        <input type="radio" class="option-input radio radio-ducha" name="ducha" value="100" />
+                        10 minutos
+                        </label>
+                       
+                        <label>
+                        <input type="radio" class="option-input radio radio-ducha" name="ducha" value="150" />
+                        15 minutos
+                        </label>
+                    </div>
+                                
+                    <div class="navegacion">
+                    <button class="btn-nav-estilo prev-btn btn-navigation" id="prev_btn_xx"><i class="bi bi-arrow-left"></i> Anterior</button>
+                    <button class="btn-nav-estilo next-btn btn-navigation" id="next_btn_ducha">Pr&oacute;ximo <i class="bi bi-arrow-right"></i></button>
+                    </div>
+
+                    
+
+                </li>
+
+                <!-- SLIDE -->
+                <li>
+                    <div class="question-header">
+                        <span class="icon ic_inmersion">Baño de inmersión</span>                              
+                    </div>
+                    <div class="question-text">¿Te das baños de inmersión? <br> ¿Con qué frecuencia?</div>
+
+                    <div class="imagen_ppal">
+                    <img src="/media-library/lo_bueno_del_agua/simulador/inmersion.png">
+                    </div>
+
+                    <!-- preguntas -->
+                    <div class="preguntas">
+                        <label>
+                        <input type="radio" class="option-input radio radio-inmersion" name="inmersion" value="0" />
+                        Nunca
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-inmersion" name="inmersion" value="35"/>
+                        1 vez por semana
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-inmersion" name="inmersion" value="70" />
+                        2 veces por semana
+                        </label>
+                    </div>
+                                
+                    <div class="navegacion">
+                    <button class="btn-nav-estilo prev-btn btn-navigation" id="prev_btn_xx"><i class="bi bi-arrow-left"></i> Anterior</button>
+                    <button class="btn-nav-estilo next-btn btn-navigation" id="next_btn_inmersion">Pr&oacute;ximo <i class="bi bi-arrow-right"></i></button>
+                    </div>
+
+                </li>                           
+                
+                
+                <!-- SLIDE -->
+                <li>
+                    <div class="question-header">
+                        <span class="icon ic_inodoro">Inodoro</span>                              
+                    </div>
+
+                    <div class="question-text" style="margin-bottom: -10px;
+                    margin-top: 20px;">¿Cuántas veces se descarga el inodoro en tu casa?</div>
+
+                    <!-- Imagen-->
+                    <div class="imagen_ppal">
+                        <img src="/media-library/lo_bueno_del_agua/simulador/inodoro.png">
+                    </div>
+
+                    <!-- preguntas -->
+                    <div class="preguntas">
+                        <label>
+                        <input type="radio" class="option-input radio radio-inodoro" name="inodoro" value="24" />
+                        2 veces por día 
+                        </label>
+                        
+                        <label>
+                        <input type="radio" class="option-input radio radio-inodoro" name="inodoro" value="48"/>
+                        4 veces por día 
+                        </label>
+                        
+                        <label>
+                        <input type="radio" class="option-input radio radio-inodoro" name="inodoro" value="96" />
+                        8 veces por día 
+                        </label>
+                    </div>
+
+                    <div class="navegacion">
+                    <button class="btn-nav-estilo prev-btn btn-navigation" id="prev_btn_xx"><i class="bi bi-arrow-left"></i> Anterior</button>
+                    <button class="btn-nav-estilo next-btn btn-navigation" id="next_btn_inodoro">Pr&oacute;ximo <i class="bi bi-arrow-right"></i></button>
+                    </div>
+                </li>  
+
+
+                <!-- SLIDE -->
+                <li>
+                    <div class="question-header">
+                        <span class="icon ic_manos">Lavado de manos</span>                              
+                    </div>
+                    <div class="question-text">
+                        ¿Cuánto tiempo dejás abierta la canilla por día?
+                        <span class="nota">
+                        (para lavarte las manos, la cara, cepillarte los dientes o afeitarte)
+                        </span>
+                    </div>
+
+                    <!-- Imagen-->
+                    <div class="imagen_ppal">
+                        <img src="/media-library/lo_bueno_del_agua/simulador/lavar-manos.png">
+                    </div>
+
+                    <!-- preguntas -->
+                    <div class="preguntas">
+                        <label>
+                        <input type="radio" class="option-input radio radio-manos" name="manos" value="36" />
+                        3 minutos por día 
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-manos" name="manos" value="60"/>
+                        5 minutos por día 
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-manos" name="manos" value="120" />
+                        10 minutos por día 
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-manos" name="manos" value="240" />
+                        20 minutos por día 
+                        </label>
+                    </div>
+
+                    <div class="navegacion">
+                    <button class="btn-nav-estilo prev-btn btn-navigation" id="prev_btn_xx"><i class="bi bi-arrow-left"></i> Anterior</button>
+                    <button class="btn-nav-estilo next-btn btn-navigation" id="next_btn_manos">Pr&oacute;ximo <i class="bi bi-arrow-right"></i></button>
+                    </div>
+                </li>  
+                
+                <!-- SLIDE -->
+                <li>
+                    <div class="question-header">
+                        <span class="icon ic_platos_mano">Lavado de platos a mano</span>                              
+                    </div>
+                    <div class="question-text">¿Cuántas veces lavás los platos a mano?</div>
+
+                    <!-- Imagen-->
+                    <div class="imagen_ppal">
+                        <img src="/media-library/lo_bueno_del_agua/simulador/lavar-platos.png">
+                    </div>
+
+                    <!-- preguntas -->
+                    <div class="preguntas">
+                        <label>
+                        <input type="radio" class="option-input radio radio-platos" name="platos" value="60"/>
+                        1 vez por día 
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-platos" name="platos" value="120" />
+                        2 veces por día 
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-platos" name="platos" value="180"/>
+                        3 veces por día 
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-platos" name="platos" value="0"/>
+                        Uso lavavajilla
+                        </label>
+                    </div>
+
+                    <div class="navegacion">
+                    <button class="btn-nav-estilo prev-btn btn-navigation radio-platos" id="prev_btn_xx"><i class="bi bi-arrow-left"></i> Anterior</button>
+                    <button class="btn-nav-estilo next-btn btn-navigation radio-platos" id="next_btn_platos">Pr&oacute;ximo <i class="bi bi-arrow-right"></i></button>
+                    </div>
+                </li>
+
+
+                <!-- SLIDE -->
+                <li>
+                    <div class="question-header">
+                        <span class="icon ic_platos_lavavajillas">Lavado de platos con lavavajilla</span>                              
+                    </div>
+                    <div class="question-text">¿Cuántas veces lavás los platos con lavavajilla?</div>
+
+
+                    <!-- Imagen-->
+                    <div class="imagen_ppal">
+                        <img src="/media-library/lo_bueno_del_agua/simulador/lavavajillas.png">
+                    </div>
+
+                    <!-- preguntas -->
+                    <div class="preguntas">
+                        <label>
+                        <input type="radio" class="option-input radio radio-lavavajillas" name="lavavajillas" value="15"/>
+                        1 carga por día 
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-lavavajillas" name="lavavajillas" value="30" />
+                        2 cargas por día 
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-lavavajillas" name="lavavajillas" value="45"/>
+                        3 cargas por día 
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-lavavajillas" name="lavavajillas" value="0"/>
+                        Los lavo a mano 
+                        </label>
+                    </div>
+
+                    <div class="navegacion">
+                    <button class="btn-nav-estilo prev-btn btn-navigation radio-platos" id="prev_btn_xx"><i class="bi bi-arrow-left"></i> Anterior</button>
+                    <button class="btn-nav-estilo next-btn btn-navigation radio-platos" id="next_btn_lavavajillas">Pr&oacute;ximo <i class="bi bi-arrow-right"></i></button>
+                    </div>
+
+                </li>
+
+
+
+                <!-- SLIDE -->
+                <li>
+                    <div class="question-header">
+                        <span class="icon ic_lavar_frutas">Lavado de frutas y verduras</span>                              
+                    </div>
+                    <div class="question-text">¿Cuánto tiempo te lleva lavar las frutas y las verduras con la canilla abierta?</div>
+
+
+                    <!-- Imagen-->
+                    <div class="imagen_ppal">
+                        <img src="/media-library/lo_bueno_del_agua/simulador/lavar-fruta.png">
+                    </div>
+
+                    <!-- preguntas -->
+                    <div class="preguntas">
+                        <label>
+                        <input type="radio" class="option-input radio radio-frutas" name="frutas" value="40"/>
+                        5 minutos por día 
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-frutas" name="frutas" value="80" />
+                        10 minutos por día 
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-frutas" name="frutas" value="120"/>
+                        15 minutos por día 
+                        </label>                                    
+                    </div>
+
+                    <div class="navegacion">
+                    <button class="btn-nav-estilo prev-btn btn-navigation radio-platos" id="prev_btn_xx"><i class="bi bi-arrow-left"></i> Anterior</button>
+                    <button class="btn-nav-estilo next-btn btn-navigation radio-platos" id="next_btn_frutas">Pr&oacute;ximo <i class="bi bi-arrow-right"></i></button>
+                    </div>
+
+                </li>
+
+                <!-- SLIDE -->
+                <li>
+                    <div class="question-header">
+                        <span class="icon ic_lavarropas">Lavado de la ropa </span>                              
+                    </div>
+                    <div class="question-text">¿Cuántas veces lavás la ropa?</div>
+
+                    <!-- Imagen-->
+                    <div class="imagen_ppal">
+                        <img src="/media-library/lo_bueno_del_agua/simulador/lavarropas.png">
+                    </div>
+
+                    <!-- preguntas -->
+                    <div class="preguntas">
+                        <label>
+                        <input type="radio" class="option-input radio radio-ropa" name="ropa" value="28"/>
+                        2 veces por semana 
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-ropa" name="ropa" value="100" />
+                        1 vez por día 
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-ropa" name="ropa" value="300"/>
+                        3 veces por día 
+                        </label>
+                    </div>
+
+                    <div class="navegacion">
+                    <button class="btn-nav-estilo prev-btn btn-navigation" id="prev_btn_05"><i class="bi bi-arrow-left"></i> Anterior</button>
+                    <button class="btn-nav-estilo next-btn btn-navigation" id="next_btn_ropa">Pr&oacute;ximo <i class="bi bi-arrow-right"></i></button>
+                    </li>
+
+                </li>
+
+                <!-- SLIDE -->
+                <li>
+                    <div class="question-header">
+                        <span class="icon ic_manguera">Lavado del auto </span>                              
+                    </div>
+                    <div class="question-text">¿Cuán seguido lavás el auto?</div>
+
+                    <!-- Imagen-->
+                    <div class="imagen_ppal">
+                        <img src="/media-library/lo_bueno_del_agua/simulador/lavar-auto.png">
+                    </div>
+
+                    <!-- preguntas -->
+                    <div class="preguntas">
+                        <label>
+                        <input type="radio" class="option-input radio radio-auto" name="auto"  value="0" />
+                        No tengo auto 
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-auto" name="auto" value="12" />
+                        1 vez por mes 
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-auto" name="auto" value="24" />
+                        2 veces por mes 
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-auto" name="auto" value="48" />
+                        4 veces por mes 
+                        </label>
+                    </div>
+
+                    <div class="navegacion">
+                    <button class="btn-nav-estilo prev-btn btn-navigation" id="prev_btn_xx"><i class="bi bi-arrow-left"></i> Anterior</button>
+                    <button class="btn-nav-estilo next-btn btn-navigation" id="next_btn_auto">Pr&oacute;ximo <i class="bi bi-arrow-right"></i></button>
+                    </div>
+
+                </li>
+
+
+                <!-- SLIDE -->
+                <li>
+                    <div class="question-header">
+                        <span class="icon ic_llenar_pileta">Llenado de pileta de lona</span>                              
+                    </div>
+                    <div class="question-text">¿Cuántas veces llenás tu pileta de lona?</div>
+
+                    <!-- Imagen-->
+                    <div class="imagen_ppal">
+                        <img src="/media-library/lo_bueno_del_agua/simulador/llenar-pileta-lona.png">
+                    </div>
+
+
+                    <!-- preguntas -->
+                    <div class="preguntas">
+                        <label>
+                        <input type="radio" class="option-input radio radio-pileta_lona" name="pileta_lona" value="-1" />
+                        No tengo pileta 
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-pileta_lona" name="pileta_lona" value="9" />
+                        1 vez al año 
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-pileta_lona" name="pileta_lona" value="18" />
+                        2 veces al año 
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-pileta_lona" name="pileta_lona" value="0" />
+                        Tengo pileta de material 
+                        </label>
+                    </div>
+
+                    <div class="navegacion">
+                    <button class="btn-nav-estilo prev-btn btn-navigation" id="prev_btn_xx"><i class="bi bi-arrow-left"></i> Anterior</button>
+                    <button class="btn-nav-estilo next-btn btn-navigation" id="next_btn_pileta_lona">Pr&oacute;ximo <i class="bi bi-arrow-right"></i></button>
+                    </li>
+
+                </li>
+
+                <!-- SLIDE -->
+                <li>
+                    <div class="question-header">
+                        <span class="icon ic_llenar_pileta">Llenado de pileta de material</span>                              
+                    </div>
+                    <div class="question-text">¿Cuántas veces llenás tu pileta de material?</div>
+
+                    <!-- Imagen-->
+                    <div class="imagen_ppal">
+                        <img src="/media-library/lo_bueno_del_agua/simulador/llenar-pileta.png">
+                    </div>
+
+
+                    <!-- preguntas -->
+                    <div class="preguntas">
+                        <label>
+                        <input type="radio" class="option-input radio radio-pileta_material" name="pileta_material" value="-1" />
+                        No tengo pileta 
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-pileta_material" name="pileta_material" value="167" />
+                        1 vez al año 
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-pileta_material" name="pileta_material" value="334" />
+                        2 veces al año 
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-pileta_material" name="pileta_material" value="0" />
+                        Tengo pileta de lona
+                        </label>
+                    </div>
+
+                    <div class="navegacion">
+                    <button class="btn-nav-estilo prev-btn btn-navigation" id="prev_btn_xx"><i class="bi bi-arrow-left"></i> Anterior</button>
+                    <button class="btn-nav-estilo next-btn btn-navigation" id="next_btn_pileta_material">Pr&oacute;ximo <i class="bi bi-arrow-right"></i></button>
+                    </div>
+
+                </li>
+
+                <!-- SLIDE -->
+                <li>
+                    <div class="question-header">
+                        <span class="icon ic_manguera">Regado de plantas</span>                              
+                    </div>
+                    <div class="question-text">¿Cuánto tiempo tardás en regar las plantas?</div>
+
+                    <!-- Imagen-->
+                    <div class="imagen_ppal">
+                        <img src="/media-library/lo_bueno_del_agua/simulador/regar-plantas.png">
+                    </div>
+
+
+                    <!-- preguntas -->
+                    <div class="preguntas">
+                        <label>
+                        <input type="radio" class="option-input radio radio-plantas" name="plantas" value="0" />
+                        No tengo plantas para regar 
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-plantas" name="plantas" value="17" />
+                        10 minutos por día 
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-plantas" name="plantas" value="34" />
+                        20 minutos por día 
+                        </label>
+                        <label>
+                        <input type="radio" class="option-input radio radio-plantas" name="plantas" value="68" />
+                        40 minutos por día 
+                        </label>
+                    </div>
+
+                    <div class="navegacion">
+                    <button class="btn-nav-estilo prev-btn btn-navigation" id="prev_btn_xx"><i class="bi bi-arrow-left"></i> Anterior</button>
+
+                    <!-- Este boton se dispara independiente - no lleva 'next-btn' -->
+                    <button class="btn-nav-estilo btn-navigation" id="next_btn_plantas">Pr&oacute;ximo <i class="bi bi-arrow-right"></i></button>
+                    </div>
+
+                </li>
+
+                <!-- SLIDE -->
+                <li>
+                    <div class="question-header resultados">
+                        <span class="icon ic_hogar">Tu consumo de agua</span>
+                    </div>
+
+                    <div class="resultados">
+                        
+                        <!-- <h1 id="consumo_usuario">
+                            Consumís <span class="resaltado">??? litros</span> de agua potable por día
+                        </h1> -->
+
+                        <h1 id="consumo_hogar" style="margin-top: 10px;">                                    
+                            En tu casa se consumen <span class="resaltado">??? litros</span> de agua potable por día
+                        </h1>
+
+                        <h3 id="tipo_consumidor">Tu consumido es <span class="resaltado">???</span></h3>
+
+                        <!-- <h2>El promedio es de 320 litros por día</h2> -->
+                        
+                        <h4>Compartí tu resultado y desafiá a tus seguidores:</h4>
+
+                        <div class="seleccion" id="seleccion">
+                            Cantidad de personas: <span>4</span><br>
+                        </div>    
+                        
+                        <!-- Redes sociales -->
+                        <div class="compartir-redes-sociales">
+
+                            <div style="display: table; margin: 0 auto;">
+                                <div style="display: table-row;">
+                                    <div style="display: table-cell; vertical-align: top;">
+                                        
+                                        <!-- TWITTER BTN ESTATICO-->
+                                        <!-- <a class="twitter-share-button"
+                                        href="https://twitter.com/intent/tweet"
+                                        data-size="large"
+                                        data-text="Mi consumo diario de #agua es de XXX litros. Soy -promedio- ¿Vos cuánto utilizas?."
+                                        data-url="https://aysa.com.ar/lobuenodelagua/simulador/"
+                                        data-hashtags="DiaMundialDelAgua "
+                                        data-via="AySA_Oficial"
+                                        >Tweet</a>      -->
+                                        
+                                        <!-- TWITTER BTN DINAMICO-->
+                                        <span id='btn_twitter'></span>
+                                    </div>
+                                    <div style="display: table-cell; vertical-align: top; padding-left: 20px;">
+                                        <!-- Your share button code -->
+                                        <div class="fb-share-button" 
+                                        data-href="https://aysa.com.ar/lobuenodelagua/simulador" 
+                                        data-layout="button"
+                                        data-size="large"></div>
+                                    
+                                    </div>
+                                </div>
+                            </div><!-- table -->
+                                
+                        </div>
+
+                        <div class="navegacion">
+                             
+                                <button class="btn-nav-estilo" type="submit" id="btn_download_pdf">
+                                    <div style="display: table;">
+                                        <div style="display: table-row;">
+                                            <div style="display: table-cell;">Para mejorar tus consumos o ayudarnos a difundirlos, descargá estos consejos</div>
+                                            <div style="display: table-cell; vertical-align: middle; font-size: 25px; padding-left: 20px;"><i class="bi bi-download"></i></div>
+                                        </div>
+                                    </div>
+                                </button> 
+
+                        </div>
+
+
+                        <div class="resaltado" style="margin-bottom: 30px;">#ValoremosLoEsencial</div>
+
+
+                        <div class="" style="padding-bottom: 20px;">
+                            <button class="btn-nav-estilo" id="btn-volver-inicio"><i class="bi bi-arrow-left"></i> Volver al inicio</button> 
+                        </div>
+                    </div><!-- ./resultados-->
+                    
+
+                </li>                            
+            </ul>
+        </div><!-- .item -->
+    </div><!-- .water_calculator-->
+
+    <!-- WATER CALCULATOR -->
+    
+    
+     <!-- SCRIPTS -->
+     <!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    -->
+    
+    <script src="/media-library/lo_bueno_del_agua/simulador/lightslider.js"></script> 
+    
+    <script>
+    
+    var valoresSeleccion = {
+    hogar_cant_personas: 0,
+    ducha: 0,
+    inmersion: 0,
+    inodoro: 0,
+    manos: 0,
+    lav_platos: 0,
+    lav_lavavajillas: 0,
+    lav_frutas: 0,
+    ropa: 0,
+    auto: 0,
+    pileta_lona: 0,
+    pileta_material: 0,
+    plantas: 0
+}
+
+$(document).ready(function() {   
+
+    // Configuracion de slider
+    var slider = $("#content-slider").lightSlider({
+        item:1,
+        loop:false,
+        keyPress:false,
+        adaptiveHeight: true,
+        autoWidth: false,
+        controls: false,
+        enableTouch: false,
+        enableDrag:false,
+        pager: false,
+        speed:800,    
+        mode: 'slide'        
+    });
+
+    // Slide inicial
+    slider.goToSlide(0)
+    //slider.goToSlide(13)
+
+    // Deshabilita botones de navegacion
+    $(".btn-navigation").prop('disabled', true);
+
+    // Botones
+    // Avanzan y retroceden un slide
+    $(".next-btn").click(function(){
+        slider.goToNextSlide();
+        $("html, body").animate({scrollTop: 0}, 1000);
+
+    });
+
+    $(".prev-btn").click(function(){
+        slider.goToPrevSlide();
+    });
+
+    // Habilita boton 'proximo' si alguno de los items por slide es seleccionado
+    $('.range_cant_personas').on('change', function() {
+
+        // Valor del slider
+        let valor = $(this).val();
+        if (valor > 0) {
+            $("#next_btn_cant_personas").prop('disabled', false);
+            valoresSeleccion.hogar_cant_personas = parseInt(valor)
+        } else {
+            $("#next_btn_cant_personas").prop('disabled', true);
+        }    
+    });
+
+    $(".radio-ducha").on("change", function () {
+        $("#next_btn_ducha").prop("disabled", false);
+    });
+
+    $(".radio-inmersion").on("change", function () {
+        $("#next_btn_inmersion").prop("disabled", false);
+    });
+
+    $(".radio-inodoro").on("change", function () {
+        $("#next_btn_inodoro").prop("disabled", false);
+    });
+
+    $(".radio-manos").on("change", function () {
+        $("#next_btn_manos").prop("disabled", false);
+    });
+
+    $(".radio-platos").on("change", function () {
+        $("#next_btn_platos").prop("disabled", false);
+    });
+
+    $(".radio-lavavajillas").on("change", function () {
+        $("#next_btn_lavavajillas").prop("disabled", false);
+    });
+
+    $(".radio-frutas").on("change", function () {
+        $("#next_btn_frutas").prop("disabled", false);
+    });
+
+    $(".radio-ropa").on("change", function () {
+        $("#next_btn_ropa").prop("disabled", false);
+    });
+
+    $(".radio-auto").on("change", function () {
+        $("#next_btn_auto").prop("disabled", false);
+    });
+
+    $(".radio-pileta_lona").on("change", function () {
+        $("#next_btn_pileta_lona").prop("disabled", false);
+    });
+
+    $(".radio-pileta_material").on("change", function () {
+        $("#next_btn_pileta_material").prop("disabled", false);
+    });
+
+    $(".radio-plantas").on("change", function () {
+        $("#next_btn_plantas").prop("disabled", false);
+    });
+
+    // Refresh de valores cuando se presiona los botones de navegacion
+    $(".btn-navigation").click(function(){   
+        actualizaValoresSeleccion()
+    });
+
+    // Botón de último slide dispara calculo de resultados
+    $("#next_btn_plantas").click(function(){
+        actualizaValoresSeleccion();
+        resultadosSeleccion();    
+        slider.goToNextSlide();
+        $("html, body").animate({scrollTop: 0}, 1000);
+    });
+
+    // Boton de último slide dispara calculo de resultados
+    $("#btn-volver-inicio").click(function(){  
+        reiniciarSimulador()
+    });
+
+    // Boton bajar PDF
+    $("#btn_download_pdf").on("click", function () {        
+        window.open("/media-library/lo_bueno_del_agua/simulador/Consejos_DMA_2021.pdf",'_blank');        
+    });
+
+    // Funciones
+    var reiniciarSimulador = function(){
+        // Reset radio buttons
+        $('input[type=radio]').each(function(i) {
+            if($(this).is(':checked')) {
+                $(this).prop('checked', false);
+            } 
+        });
+
+        // Reset range selector
+        var target = document.querySelector('.value');
+        target.innerHTML = 0; // value
+        $('.range_cant_personas').val(0);
+
+        // Deshabilita botones de navegacion
+        $(".btn-navigation").prop('disabled', true);
+    
+        // Ir a slide inicial
+        slider.goToSlide(0)
+    }
+
+    var actualizaValoresSeleccion = function() {
+        //valoresSeleccion.hogar_cant_personas = "";
+        valoresSeleccion.ducha = parseInt($("input[name='ducha']:checked").val());   
+        valoresSeleccion.inmersion = parseInt($("input[name='inmersion']:checked").val());
+        valoresSeleccion.inodoro = parseInt($("input[name='inodoro']:checked").val());
+        valoresSeleccion.manos = parseInt($("input[name='manos']:checked").val());
+        valoresSeleccion.lav_platos = parseInt($("input[name='platos']:checked").val());
+        valoresSeleccion.lav_lavavajillas = parseInt($("input[name='lavavajillas']:checked").val());
+        valoresSeleccion.lav_frutas = parseInt($("input[name='frutas']:checked").val());
+        valoresSeleccion.ropa = parseInt($("input[name='ropa']:checked").val());
+        valoresSeleccion.auto = parseInt($("input[name='auto']:checked").val());       
+
+        var valorPiletaLona = parseInt($("input[name='pileta_lona']:checked").val());  
+        console.log("valorPiletaLona: " + valorPiletaLona);
+        valoresSeleccion.pileta_lona = (valorPiletaLona === -1) ? 0 : 0;
+
+        var valorPiletaMaterial = parseInt($("input[name='pileta_material']:checked").val());  
+        console.log("valorPiletaMaterial: " + valorPiletaMaterial);
+        valoresSeleccion.pileta_material = (valorPiletaMaterial === -1) ? 0 : 0;
+
+        valoresSeleccion.plantas = parseInt($("input[name='plantas']:checked").val());  
+
+        // Habilito botones "anterior"
+        $(".prev-btn").prop('disabled', false);
+        console.log('Objeto: ', valoresSeleccion)            
+    }
+
+
+    var resultadosSeleccion = function () {
+
+        /* ## Seleccion del usuario */
+        var ducha = "";
+        if (valoresSeleccion.ducha == 50) ducha = "5 minutos";
+        else if (valoresSeleccion.ducha == 100) ducha = "10 minutos";
+        else ducha = "15 minutos";
+
+        var inmersion = "";
+        if (valoresSeleccion.inmersion == 35) inmersion = "1 vez por semana";
+        else if (valoresSeleccion.inmersion == 70) inmersion = "2 veces por semana";
+        else inmersion = "Nunca";
+
+        var inodoro = "";
+        if (valoresSeleccion.inodoro == 24) inodoro = "2 veces por día";
+        else if (valoresSeleccion.inodoro == 48) inodoro = "4 veces por día";
+        else inodoro = "8 veces por día";
+
+        var manos = "";
+        if (valoresSeleccion.manos == 36) manos = "3 min. por día";
+        else if (valoresSeleccion.manos == 60) manos = "5 min. por día";
+        else if (valoresSeleccion.manos == 120) manos = "10 min. por día";
+        else manos = "20 minutos por día";
+
+        var platos = "";
+        if (valoresSeleccion.lav_platos == 60) platos = "1 vez por día";
+        else if (valoresSeleccion.lav_platos == 120) platos = "2 veces por día";
+        else if (valoresSeleccion.lav_platos == 180) platos = "3 veces por día";
+        else platos = "Uso de lavavajilla";
+
+        var lavavajilla = "";
+        if (valoresSeleccion.lav_lavavajillas == 15) lavavajilla = "1 carga por día";
+        else if (valoresSeleccion.lav_lavavajillas == 30) lavavajilla = "2 cargas por día";
+        else if (valoresSeleccion.lav_lavavajillas == 45) lavavajilla = "3 cargas por día";
+        else lavavajilla = "Los lavo a mano";
+
+        var frutas = "";
+        if (valoresSeleccion.lav_frutas == 40) frutas = "5 minutos por día";
+        else if (valoresSeleccion.lav_frutas == 80) frutas = "10 min. por día";
+        else frutas = "15 minutos por día";
+
+        var ropa = "";
+        if (valoresSeleccion.ropa == 28) ropa = "2 veces por semana";
+        else if (valoresSeleccion.ropa == 100) ropa = "1 vez por día";
+        else ropa = "3 veces por día";
+
+        var auto = "";
+        if (valoresSeleccion.auto == 12)  auto = "1 vez por mes";
+        else if (valoresSeleccion.auto == 24)  auto = "2 veces por mes";
+        else if (valoresSeleccion.auto == 48)  auto = "4 veces por mes";
+        else auto = "No tengo auto";
+
+        var pileta_lona = "";
+        if (valoresSeleccion.pileta_lona == -1)  pileta_lona = "No tengo pileta de material";
+        else if (valoresSeleccion.pileta_lona == 9)  pileta_lona = "1 vez al año";
+        else if (valoresSeleccion.pileta_lona == 18)  pileta_lona = "2 veces al año";
+        else pileta_lona = "No tengo pileta";
+
+
+        var pileta_material = "";
+        if (valoresSeleccion.pileta_material == -1)  pileta_material = "No tengo pileta de lona";
+        else if (valoresSeleccion.pileta_material == 167)  pileta_material = "1 vez al año";
+        else if (valoresSeleccion.pileta_material == 334)  pileta_material = "2 veces al año";
+        else pileta_material = "No tengo pileta";
+
+        var plantas = "";
+        if (valoresSeleccion.plantas == 17) plantas = "10 minutos por día";
+        else if (valoresSeleccion.plantas == 34) plantas = "20 minutos por día";
+        else if (valoresSeleccion.plantas == 68) plantas = "40 minutos por día";
+        else plantas = "No tengo plantas";
+
+        var texto =
+            "Cantidad de personas: <span>" + valoresSeleccion.hogar_cant_personas +"</span><br>" +
+            "Tiempo en la ducha: <span>" + ducha +"</span><br>" +
+            "Baño de inmersion: <span>" + inmersion +"</span><br>" +
+            "Descarga de inodoro: <span>" + inodoro +"</span><br>" +
+            "Lavado de manos: <span>" + manos +"</span><br>" +
+            "Lavado de platos a mano: <span>" + platos +"</span><br>" +
+            "Lavado con lavavajillas: <span>" + lavavajilla +"</span><br>" +
+            "Lavado de frutas/verduras: <span>" + frutas +"</span><br>" +
+            "Lavado de ropa: <span>" + ropa +"</span><br>" +
+            "Lavado de auto: <span>" + auto +"</span><br>" +
+            "Llenado de pileta lona: <span>" + pileta_lona +"</span><br>" +
+            "Llenado de pileta material: <span>" + pileta_material +"</span><br>" +
+            "Regado de plantas: <span>" + plantas +"</span><br>";
+
+            $("#seleccion").html(texto);
+
+        
+        /* ## Litros consumidos por usuario */
+
+        var consumoIndividual = valoresSeleccion.ducha + valoresSeleccion.inmersion + valoresSeleccion.inodoro + valoresSeleccion.manos;
+
+        var consumoGeneral = valoresSeleccion.lav_platos + valoresSeleccion.lav_lavavajillas + valoresSeleccion.lav_frutas + valoresSeleccion.ropa + valoresSeleccion.auto + valoresSeleccion.pileta_lona + valoresSeleccion.pileta_material + valoresSeleccion.plantas;
+
+        var consumoPersonal =  consumoIndividual + consumoGeneral;
+        console.log("consumoPersonal: ", consumoPersonal)
+
+        var consumoHogar = (consumoIndividual * valoresSeleccion.hogar_cant_personas) + consumoGeneral;
+
+        var tipoConsumidor = "";
+        if (consumoPersonal <= 250) 
+            tipoConsumidor = "Responsable";
+        else if (consumoPersonal > 250 && consumoPersonal <= 350) 
+            tipoConsumidor = "Promedio";
+        else 
+            tipoConsumidor = "Derrochador";
+
+        //$('#consumo_usuario').html("Consumís <span class='resaltado'>"+consumoPersonal+" litros </span> de agua potable por día");
+
+        $('#consumo_hogar').html("En tu casa se consumen <span class='resaltado'>"+consumoHogar+" litros</span> de agua potable por día");
+        
+        $('#tipo_consumidor').html("Tu consumo es <span class='resaltado'>"+tipoConsumidor+"</span>");
+
+        // Twitter
+        var title = 'Mi consumo diario de #agua es de '+consumoPersonal+' litros. Soy '+tipoConsumidor+'. ¿Vos cuánta usás?';
+        var share_url = 'https://aysa.com.ar/lobuenodelagua/simulador';
+        var hashtags = 'Water2Me'; // Agregar mas hashtags separados por comas
+        $('#btn_twitter').html('<a href="https://twitter.com/share" class="twitter-share-button" data-url="' + share_url +'" data-size="large" data-text="' + title + '" data-hashtags="'+hashtags+'" data-via="AySA_Oficial" data-count="none">Tweet</a>');
+        twttr.widgets.load();
+    }
+});
+
+
+/* Range slider */
+var elem = document.querySelector('input[type="range"]');
+
+var rangeValue = function(){
+    var newValue = elem.value;
+    var target = document.querySelector('.value');
+    target.innerHTML = newValue;
+}
+
+elem.addEventListener("input", rangeValue);
+    
+    
+    </script>   
+    
+</body>
+</html>
+
+    
+            </span>
+    
+
+
+
+
+</div>
+
+    <script type="text/javascript">
+    
+var __SITECONTEXT = {"rootSectionsPrefix":"","metadata":{"metadata":{"Id":"8AE74CEC-929A-4768-AFBD-640FF92AC582","Title":"Simulador de consumo de agua","CanonicalName":"simulador","Enabled":true,"Section":"316D1CD1-1C4B-48E6-884E-2EC013413763","Template":"00000000-0000-0000-0000-000000000000","Description":"Simulador de consumo de agua","LastModificationUser":"72855A7C-F8C4-443E-8091-4DD23538E7F4","LastModificationDate":"2021-03-29T19:53:24.060Z","DeletedBy":null,"DeletedDate":null},"pathParts":[{"name":"lobuenodelagua","canonicalName":"lobuenodelagua","hasDefault":true},{"name":"Simulador de consumo de agua","canonicalName":"simulador","hasDefault":true}],"fullPath":"lobuenodelagua/simulador","sectionPath":"lobuenodelagua"}};
+
+var __CSCURRENTPAGE = __SITECONTEXT.metadata;
+
+function ComponentServices() {
+    this._init_cbs = [];
+
+    this.toString = function () { };
+    this.fromString = function () { };
+
+    this.init = function () {
+        for (var i = 0; i < this._init_cbs.length; i++) {
+            this._init_cbs[i]();
+        }
+    };
+
+    this.addInit = function (cb) {
+        this._init_cbs.push(cb);
+    };
+
+    this.setToString = function (cb) {
+        this.toString = cb;
+    };
+
+    this.setFromString = function (cb) {
+        this.fromString = cb;
+    };
+
+    this.exportVariable = function (name, variable) {
+        ((1, eval)('this'))[name] = variable;
+    };
+
+    this.currentPage = __CSCURRENTPAGE;
+    this.pageContext = __SITECONTEXT;
+
+    this.rewriteAbsoluteSectionPath = function (link) {
+        return $.ajax({
+            url: "/api/sections/rewriteAbsoluteSectionPath",
+            data: {
+                path: link,
+                siteContext: JSON.stringify(__SITECONTEXT)
+            }
+        });
+    };
+}
+
+((1, eval)('this')).ComponentServices = ComponentServices;
+        var componentHandlers = [];
+        var componentCodes = [];
+       
+    </script>
+
+    <script type="text/javascript">
+        "use strict";
+        
+        
+        componentCodes.push(function(ComponentServices) {});
+    </script>
+
+    <script type="text/javascript">
+        "use strict";
+
+        $(window).on("load", function () {
+            for(var i=0; i<componentCodes.length; i++){
+                var cs = new ComponentServices();
+                componentCodes[i](cs);
+                cs.init();
+                componentHandlers.push(cs);
+            }
+        });
+
+    </script>
+   
+
+</body>
+</html>

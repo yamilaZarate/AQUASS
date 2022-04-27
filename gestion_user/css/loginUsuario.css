@@ -1,0 +1,121 @@
+* {
+  margin: 50;
+  padding: 50;
+  box-sizing: border-box;
+}
+
+body {
+    min-height: 100%;
+    background: url("inicio.png")
+
+    no-repeat center center fixed;
+    background-size: cover;
+}
+
+
+.contenedor{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+.texto-encima{
+    text-align-last: collapse;
+    font-weight:bold;
+    font-size:7em;
+    color: white;
+    top: 10px;
+    left: 400px;
+    border-color: white;
+    margin: 30 auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100%;
+    max-width: 900px;
+    font-size: 26px; /* Fuente base */
+    font-family: "Roboto", sans-serif;ç
+}
+
+.centrado{
+    position: absolute;
+    font-weight: bold;
+    top: 110px;
+    left: 350px;
+    font-size: 20px;
+    transform: translate(-50%, -50%);
+    color: #26A003;
+    font-family: Verdana;
+    background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%);
+
+}
+
+.form-login {
+  width: 380px;
+  height: 390px;
+  top: 10px;
+  left: 350px;
+  padding: 50px 50px;
+  border-top: 4px solid #008f39;
+  color: white;
+  background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 0%);
+}
+
+.form-login h5 {
+  margin: 0;
+  text-align: center;
+  height: 25px;
+  color:#00070C;
+  margin-bottom: 20px;
+  border-bottom: 1px solid;
+  font-size: 20px;
+}
+
+.controls {
+  width: 100%;
+  border: 1px solid lightgreen;
+  margin-bottom: 10px;
+  padding: 11px 40px;
+  background: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.buttons {
+  width: 100%;
+  height: 35px;
+  background-image: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);
+  border: none;
+  color: white;
+  margin-bottom: 14px;
+}
+
+.form-login p{
+  height: 35px;
+  text-align: center;
+  border-bottom: 1px solid;
+  text-decoration: underline;
+  
+}
+
+.form-login a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.form-login a:hover {
+  text-decoration: underline;
+}
+
+#logo {
+  width: 150px;
+  padding-left: 25px;
+  padding-top: 5px;
+  position: absolute;
+}
+
+.logo {
+  min-width: 150px;
+  min-height: 120px;
+  position: absolute;
+  left:0;
+}
